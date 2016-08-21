@@ -1,0 +1,58 @@
+@import "font-awesome";
+// @import "icomoon";
+@import "gulp-icons";
+
+[class*="icon-"] {
+
+	&[class*="circle"] {
+
+		font-size: $space-and-half;
+		position: absolute;
+		content: "";
+		@include circle(1.3em);
+		@extend %center;
+		background: white;
+		z-index: -1;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&.icon-arrow-left {
+			&:before{
+				text-indent: -0.1em;
+			}
+		}
+		&.icon-arrow-right {
+			&:before{
+				text-indent: 0.1em;
+			}
+		}
+
+
+
+		&[class*="-black"]:after {
+
+			background: $black;
+		}
+
+		&[class*="-invert"] {
+
+			background-color: black;
+			opacity: 0.7;
+			width: 1.2em;
+			height: 1.2em;
+
+			&:before {
+
+				color: white;
+			}
+		}
+	}
+}

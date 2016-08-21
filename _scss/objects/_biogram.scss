@@ -1,0 +1,46 @@
+.biogram {
+
+  margin: $space-double 0;
+  @extend %row;
+
+  > * {
+
+    // display: flex;
+  }
+
+  &__image {
+
+    flex: 0 0 200px;
+
+    img {
+
+      border-radius: 50%;
+    }
+  }
+
+  &__info {
+
+    flex: 1 auto;
+
+    &__time {
+
+      opacity: .5;
+      font-size: 0.6rem;
+    }
+  }
+
+  &--aside {
+
+    @extend %column;
+
+    > [class*="image"] {
+
+      flex: 1 auto;
+      width: 7vw;
+      margin: 0;
+    }
+
+    > [class*="info"] {
+    }
+  }
+}

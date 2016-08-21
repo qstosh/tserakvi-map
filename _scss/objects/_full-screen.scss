@@ -1,0 +1,12 @@
+.screenfull {
+
+  visibility: hidden;
+  height: 0;
+  @include animate-o($delay: 0s);
+
+  &--active {
+
+    visibility: visible;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,189 @@
+$zindex-modal: 9999;
+$zindex-modal-background: 999;
+
+$modal-inner-padding: 15px !default;
+
+$modal-title-padding: 15px !default;
+$modal-title-line-height: 20px;
+
+$modal-content-bg: #fff !default;
+$modal-content-border-color: rgba(0, 0, 0, .2) !default;
+$modal-content-fallback-border-color: #999 !default;
+
+$modal-backdrop-bg: #000 !default;
+$modal-backdrop-opacity: .5 !default;
+$modal-header-border-color: #e5e5e5 !default;
+$modal-footer-border-color: $modal-header-border-color !default;
+
+$modal-lg: 900px !default;
+$modal-md: 600px !default;
+$modal-sm: 300px !default;
+
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+
+.modal-open {
+	overflow: hidden;
+}
+
+.modal {
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal;
+	-webkit-overflow-scrolling: touch;
+
+	// Prevent Chrome on Windows from adding a focus outline. For details, see
+	// https://github.com/twbs/bootstrap/pull/10951.
+	outline: 0;
+
+	&.fade .modal-dialog {
+		transform: translate(0, -25%);
+		transition: transform 0.4s ease-out;
+	}
+	&.in .modal-dialog {
+		transform: translate(0, 0)
+	}
+}
+
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 10px;
+}
+
+.modal-content {
+	position: relative;
+	background-color: $modal-content-bg;
+	border-radius: $border-radius;
+	background-clip: padding-box;
+	outline: 0;
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $zindex-modal-background;
+	background-color: $modal-backdrop-bg;
+
+	&.fade {
+		opacity: 0;
+	}
+	&.in {
+		opacity: $modal-backdrop-opacity;
+	}
+}
+
+.modal-header {
+
+	position: relative;
+	padding: $space-and-half $space;
+	border-bottom: 1px solid $modal-header-border-color;
+	min-height: ($modal-title-padding + $modal-title-line-height);
+
+	.close {
+
+		position: absolute;
+		right: $space;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 10;
+		padding: 0;
+		@include square(1.7rem);
+		display: block;
+
+		&:hover {
+
+			background-color: $red;
+		}
+
+		span {
+
+			position: absolute;
+			pointer-events: none;
+			font-size: 2rem;
+			@extend %center;
+			margin-top: -4px;
+		}
+	}
+}
+
+.modal-title {
+	margin: 0;
+	line-height: $modal-title-line-height;
+}
+
+.modal-body {
+	position: relative;
+	padding: $space-and-half $space;
+}
+
+.modal-footer {
+	padding: $modal-inner-padding;
+	text-align: right;
+	border-top: 1px solid $modal-footer-border-color;
+	@extend .clearfix;
+
+	button + button {
+		margin-left: $space-half;
+		margin-bottom: 0;
+	}
+
+	.btn-group .btn + .btn {
+		margin-left: -1px;
+	}
+
+	.btn-block + .btn-block {
+		margin-left: 0;
+	}
+}
+
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}
+
+@media (min-width: $screen-sm-min) {
+
+	.modal-dialog {
+		width: $modal-md;
+		margin: 30px auto;
+	}
+	.modal-content {
+		box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	}
+
+	.modal-sm {
+		width: $modal-sm;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.modal-lg {
+		width: $modal-lg;
+	}
+}

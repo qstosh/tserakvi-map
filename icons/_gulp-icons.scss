@@ -1,0 +1,257 @@
+@font-face {
+	font-family: "Icons";
+	src: url('../icons/Icons.eot');
+	src: url('../icons/Icons.eot?#iefix') format('eot'),
+		url('../icons/Icons.woff') format('woff'),
+		url('../icons/Icons.ttf') format('truetype'),
+		url('../icons/Icons.svg#Icons') format('svg');
+}
+
+%icon {
+	font-family: "Icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == alarm {
+		$char: "\E001";
+	}
+	@if $filename == arrow-left-2 {
+		$char: "\E002";
+	}
+	@if $filename == arrow-left {
+		$char: "\E003";
+	}
+	@if $filename == arrow-right-2 {
+		$char: "\E004";
+	}
+	@if $filename == arrow-right {
+		$char: "\E005";
+	}
+	@if $filename == audio {
+		$char: "\E006";
+	}
+	@if $filename == book {
+		$char: "\E007";
+	}
+	@if $filename == bubble {
+		$char: "\E008";
+	}
+	@if $filename == checkmark {
+		$char: "\E009";
+	}
+	@if $filename == cross {
+		$char: "\E00A";
+	}
+	@if $filename == curious {
+		$char: "\E00B";
+	}
+	@if $filename == edit {
+		$char: "\E00C";
+	}
+	@if $filename == file {
+		$char: "\E00D";
+	}
+	@if $filename == fullscreen-off {
+		$char: "\E00E";
+	}
+	@if $filename == fullscreen-on {
+		$char: "\E00F";
+	}
+	@if $filename == group {
+		$char: "\E010";
+	}
+	@if $filename == headphones {
+		$char: "\E011";
+	}
+	@if $filename == hide {
+		$char: "\E012";
+	}
+	@if $filename == image {
+		$char: "\E013";
+	}
+	@if $filename == info-2 {
+		$char: "\E014";
+	}
+	@if $filename == info {
+		$char: "\E015";
+	}
+	@if $filename == library {
+		$char: "\E016";
+	}
+	@if $filename == location {
+		$char: "\E017";
+	}
+	@if $filename == minus {
+		$char: "\E018";
+	}
+	@if $filename == pair {
+		$char: "\E019";
+	}
+	@if $filename == pause {
+		$char: "\E01A";
+	}
+	@if $filename == play {
+		$char: "\E01B";
+	}
+	@if $filename == plus {
+		$char: "\E01C";
+	}
+	@if $filename == show {
+		$char: "\E01D";
+	}
+	@if $filename == spinner {
+		$char: "\E01E";
+	}
+	@if $filename == stop {
+		$char: "\E01F";
+	}
+	@if $filename == undo {
+		$char: "\E020";
+	}
+	@if $filename == user {
+		$char: "\E021";
+	}
+	@if $filename == volume-low {
+		$char: "\E022";
+	}
+	@if $filename == volume-medium {
+		$char: "\E023";
+	}
+	@if $filename == volume-mute-x {
+		$char: "\E024";
+	}
+	@if $filename == volume-mute {
+		$char: "\E025";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before) {
+	&:#{$insert} {
+		@extend %icon;
+		content: icon-char($filename);
+	}
+}
+
+.icon-alarm {
+	@include icon(alarm);
+}
+.icon-arrow-left-2 {
+	@include icon(arrow-left-2);
+}
+.icon-arrow-left {
+	@include icon(arrow-left);
+}
+.icon-arrow-right-2 {
+	@include icon(arrow-right-2);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-audio {
+	@include icon(audio);
+}
+.icon-book {
+	@include icon(book);
+}
+.icon-bubble {
+	@include icon(bubble);
+}
+.icon-checkmark {
+	@include icon(checkmark);
+}
+.icon-cross {
+	@include icon(cross);
+}
+.icon-curious {
+	@include icon(curious);
+}
+.icon-edit {
+	@include icon(edit);
+}
+.icon-file {
+	@include icon(file);
+}
+.icon-fullscreen-off {
+	@include icon(fullscreen-off);
+}
+.icon-fullscreen-on {
+	@include icon(fullscreen-on);
+}
+.icon-group {
+	@include icon(group);
+}
+.icon-headphones {
+	@include icon(headphones);
+}
+.icon-hide {
+	@include icon(hide);
+}
+.icon-image {
+	@include icon(image);
+}
+.icon-info-2 {
+	@include icon(info-2);
+}
+.icon-info {
+	@include icon(info);
+}
+.icon-library {
+	@include icon(library);
+}
+.icon-location {
+	@include icon(location);
+}
+.icon-minus {
+	@include icon(minus);
+}
+.icon-pair {
+	@include icon(pair);
+}
+.icon-pause {
+	@include icon(pause);
+}
+.icon-play {
+	@include icon(play);
+}
+.icon-plus {
+	@include icon(plus);
+}
+.icon-show {
+	@include icon(show);
+}
+.icon-spinner {
+	@include icon(spinner);
+}
+.icon-stop {
+	@include icon(stop);
+}
+.icon-undo {
+	@include icon(undo);
+}
+.icon-user {
+	@include icon(user);
+}
+.icon-volume-low {
+	@include icon(volume-low);
+}
+.icon-volume-medium {
+	@include icon(volume-medium);
+}
+.icon-volume-mute-x {
+	@include icon(volume-mute-x);
+}
+.icon-volume-mute {
+	@include icon(volume-mute);
+}

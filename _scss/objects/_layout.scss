@@ -1,0 +1,217 @@
+[class^=wrapper] {
+
+	position: relative;
+	max-width: 43rem;
+	// max-width: 60ch;
+	margin: 0 auto;
+	padding: 0 $space;
+
+	&[class*="--wide"] {
+
+		max-width: 900px;
+	}
+}
+
+.row {
+
+	.image {
+		margin-top: $space;
+	}
+
+	@extend %row;
+
+	&__item {
+
+		flex: 1;
+
+		&--fixed-width {
+
+			flex: initial;
+		}
+
+		&:not(:last-child) {
+
+			margin-right: $space;
+		}
+
+		&:not(:first-child) {
+
+			margin-left: $space;
+		}
+	}
+}
+
+html.lesson-layout {
+	&, body {
+		overflow: hidden;
+	}
+}
+
+.column {
+
+	@extend %column;
+
+	&__item {
+
+		flex: 1 auto;
+
+		&:not(:last-child) {
+
+			margin-bottom: $space;
+		}
+
+		&:not(:first-child) {
+
+			margin-top: $space;
+		}
+	}
+}
+
+.page-container {
+
+	padding: 0 0 20vh;
+
+	&.no-header {
+		> :first-child {
+			margin-top: $space-double;
+		}
+	}
+}
+
+.gallery {
+	border: 1px solid rgb(222, 222, 222);
+	margin-top: $space;
+	margin: $space-double 0 $space-double 0;
+
+	.image {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	figcaption {
+		margin: $space-quater 0 $space-half;
+	}
+
+	&.cp-page-slider {
+		.cp-page-slider {
+			&__pages_container {
+				background-color: #aaa;
+			}
+			&__pages {
+				&__slide {
+
+				}
+			}
+		}
+	}
+}
+
+#pages-container.cp-page-slider {
+	.cp-page-slider {
+		&__pages_container:not(.no-background) {
+			height: 100%;
+			background-color: #aaa;
+		}
+
+		&__pages {
+			height: 100%;
+			&__slide:not(.no-background) {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.lesson-body {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: stretch;
+
+	#pages-container {
+		flex: 1;
+	}
+}
+
+.cp-page-slider {
+	overflow: hidden;
+	position: relative;
+
+	&.gallery {
+		.cp-page-slider__pages__slide {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			> * {
+				display: block;
+				max-width: 100%;
+			}
+		}
+	}
+
+	&.disable-transiton {
+		* {
+			transition: none !important;
+		}
+	}
+
+	&__pages_container {
+		overflow: hidden !important;
+
+		&.full-screen {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+	}
+
+	&__pages {
+		display: flex;
+		transform: translate3d(0%, 0, 0);
+		align-items: stretch;
+		width: 100%;
+		position: relative;
+		left: 0;
+
+		// bugged transition! (firefox)
+		transition: none !important;
+
+		&__slide {
+			flex: 0 0 auto;
+			width: 100%;
+			overflow: hidden;
+			position: relative;
+
+			&__scroll {
+				overflow-y: auto;
+				overflow-x: hidden;
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+}
+
+.wrapper_16-9 {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

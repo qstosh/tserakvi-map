@@ -1,0 +1,33 @@
+html.egipt {
+
+  &,
+  body {
+
+    position: fixed;
+    overflow-x: hidden;
+    @extend %fullsize;
+    background: #ffe7b4;
+  }
+
+  .layer {
+
+    position: absolute;
+    @extend %fullscreen;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease .1s;
+
+    &--active {
+
+      opacity: 1;
+      will-change: opacity;
+    }
+
+    img {
+
+      object-fit: contain;
+      @extend %fullscreen;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="584px" height="500px" viewBox="0 0 584 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-right-big</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M362.799225,487.796621 L571.136899,279.458947 C587.408071,263.187775 587.408071,236.812225 571.136899,220.541053 L362.799225,12.2033792 C346.528053,-4.06779308 320.152503,-4.06779308 303.881331,12.2033792 C287.610159,28.4745516 287.610159,54.850101 303.881331,71.1212734 L441.092523,208.332465 L41.6675347,208.332465 C18.6462218,208.332465 0,226.978687 0,250 C0,273.021313 18.6462218,291.667535 41.6675347,291.667535 L441.092523,291.667535 L303.881331,428.878727 C295.756162,437.003896 291.672743,447.670785 291.672743,458.337674 C291.672743,469.004563 295.735328,479.671451 303.881331,487.796621 C320.152503,504.067793 346.528053,504.067793 362.799225,487.796621 L362.799225,487.796621 Z" id="arrow-right-big" fill="#444444" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

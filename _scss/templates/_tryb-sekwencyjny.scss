@@ -1,0 +1,186 @@
+html.tryb-sekwencyjny .debug {
+
+	position: fixed;
+	top: 0;
+	background: rgba(0,0,0,0.6);
+	padding: $space 1vw;
+	z-index: 999;
+	color: white;
+
+	input {
+
+		width: 98vw;
+	}
+}
+
+html.tryb-sekwencyjny {
+
+	&,
+	body {
+
+		height: 100%;
+		@extend %no-overflow;
+	}
+
+	body {
+
+		background: #FEFBF9;
+
+		&.bg-3 {
+
+			background: #F7FAFC;
+		}
+	}
+}
+
+html.tryb-sekwencyjny .background {
+
+	@extend %fixed-fullscreen;
+	@extend %no-overflow;
+	@extend %no-touchy;
+
+	svg {
+
+		position: absolute;
+		bottom: 0;
+		@extend %accelerate;
+
+		[id^="_"] {
+
+			will-change: transform;
+			transition: transform .6s cubic-bezier(0.250, 0.460, 0.450, 0.940) .85s;
+		}
+	}
+}
+
+html.tryb-sekwencyjny .content {
+
+	@extend %fixed-fullscreen;
+
+	.slide {
+
+		$margin-w: 25vw;
+		$margin-h: 25vh;
+
+		position: absolute;
+		width: calc(100% - #{$margin-w});
+		height: calc(100% - #{$margin-h});
+		@include square(100%);
+		padding: $margin-h / 2 $margin-w / 2;
+		border-radius: $border-radius;
+
+		overflow: auto;
+
+		&--active {
+
+			z-index: 10;
+		}
+
+		&--active,
+		&.ng-enter,
+		&.ng-leave {
+
+			will-change: opacity, transform;
+		}
+
+		&.ng-enter,
+		&.ng-leave {
+
+			overflow: hidden;
+		}
+
+		&.ng-enter {
+
+			transform: translateX(30%);
+			transition: opacity .3s cubic-bezier(0.250, 0.460, 0.450, 0.940),
+							  transform .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		}
+
+		&.ng-enter.ng-enter-active {
+
+			transform: translateX(0%);
+		}
+
+		&.ng-leave {
+
+			transform: translateX(0%);
+		 transition: opacity .3s cubic-bezier(0.250, 0.460, 0.450, 0.940),
+			 			   transform .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+		}
+
+		&.ng-leave.ng-leave-active {
+
+			transform: translateX(-50%);
+		}
+
+		&.ng-enter,
+		&.ng-leave.ng-leave-active {
+
+			opacity: 0;
+			z-index: 0;
+		}
+
+		&.ng-leave,
+		&.ng-enter.ng-enter-active {
+
+			opacity: 1;
+		}
+
+		&--going-back {
+
+			&.ng-enter {
+
+				transform: translateX(-30%);
+				transition: opacity .3s cubic-bezier(0.250, 0.460, 0.450, 0.940),
+								  transform .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+			}
+
+			&.ng-leave {
+
+			 transition: opacity .3s cubic-bezier(0.250, 0.460, 0.450, 0.940),
+				 			   transform .5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+			}
+
+			&.ng-leave.ng-leave-active {
+
+				transform: translateX(50%);
+			}
+		}
+	}
+
+	.slide video {
+
+		$w: 400px;
+		$h: $w / 1.73;
+
+		width: $w;
+		height: $h;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.slide .media {
+
+		opacity: 0;
+		transition: opacity .5s ease-out;
+
+		&--active {
+
+			will-change: opacity;
+
+			opacity: 1;
+		}
+	}
+}
+
+html.tryb-sekwencyjny body {
+
+	opacity: 0;
+	transition: opacity 1s ease-out 1s;
+
+	&.loaded {
+
+		will-change: opacity;
+		opacity: 1;
+	}
+}

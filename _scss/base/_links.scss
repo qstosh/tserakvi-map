@@ -1,0 +1,13 @@
+a:not(.image-link) {
+
+	color: inherit;
+	outline: 0;
+	opacity: .85;
+
+	&:hover,
+	&:focus {
+
+		opacity: 1;
+		text-decoration: none;
+	}
+}
