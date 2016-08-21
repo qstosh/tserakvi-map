@@ -1,0 +1,20 @@
+.sidebar {
+	position: absolute;
+
+	width: 15%;
+	min-width: 40ch;
+	height: 100%;
+	background-color: rgb(244, 244, 244);
+
+	z-index: 99;
+	padding: 1rem;
+
+	overflow-y: auto;
+	transition: all 0.3s ease;
+	box-shadow: -1px 0 6px rgba(0, 0, 0, 0.4);
+	transform: translateX(-100%);
+
+	&.sidebar-on {
+		transform: translateX(0);
+	}
+}

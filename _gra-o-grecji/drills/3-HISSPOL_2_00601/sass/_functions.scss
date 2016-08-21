@@ -1,0 +1,39 @@
+@mixin draw-circle($radius) {
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	height: $radius;
+	width: $radius;
+}
+
+@mixin draw-triangle-up($base, $height, $color) {
+	border-right: $base solid transparent;
+	border-bottom: $height solid $color;
+	border-left: $base solid transparent;
+	height: 0;
+	width: 0;
+}
+
+@mixin draw-triangle-right($base, $height, $color) {
+	border-top: $base solid transparent;
+	border-bottom: $base solid transparent;
+	border-left: $height solid $color;
+	height: 0;
+	width: 0;
+}
+
+@mixin draw-triangle-down($base, $height, $color) {
+	border-top: $height solid $color;
+	border-right: $base solid transparent;
+	border-left: $base solid transparent;
+	height: 0;
+	width: 0;
+}
+
+@mixin draw-triangle-left($base, $height, $color) {
+	border-top: $base solid transparent;
+	border-right: $height solid $color;
+	border-bottom: $base solid transparent;
+	height: 0;
+	width: 0;
+}

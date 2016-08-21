@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html ng-app="Map" class="gra-o-grecji" lang="pl">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Gra o Grecji</title>
+
+  <!-- disable zoom -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+  <!-- ios specific -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- browser sync -->
+  <style>
+
+    body::before {
+      background: hsla(0, 100%, 40%, 0.8);
+      display: block;
+      padding: 20px;
+      font-weight: bold;
+      font-size: 1.618rem;
+    }
+
+  </style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body resizable id="body" class="u-color-bg-white" ng-controller="mainController" style="background-color: {{bgColor}}" ng-init="isLoaded()">
+
+  <figure class="u-debug" ng-if="debug === true" style="margin-bottom: 10rem; background: rgba(0,0,0,0.3)" u-hide>
+    <code>state = <span>{{state | json}}</span></code><br>
+    <code>audioMain[0].currentTime = <span>{{audioMain[0].currentTime}}</span></code><br>
+    <code>audioMain[1].currentTime = <span>{{audioMain[1].currentTime}}</span></code><br>
+    <code>audioMain[2].currentTime = <span>{{audioMain[2].currentTime}}</span></code><br>
+    <code>audioMain[3].currentTime = <span>{{audioMain[3].currentTime}}</span></code><br>
+    <code>audioMain[0].paused = <span>{{audioMain[0].paused}}</span></code><br>
+    <!-- <code>hoverAgora = <span>{{hoverAgora}}</span></code><br> -->
+    <!-- <code>hoverTeatr = <span>{{hoverTeatr}}</span></code><br> -->
+    <!-- <code>hoverGimnazjon = <span>{{hoverGimnazjon}}</span></code><br> -->
+    <!-- <code>hoverAkropol = <span>{{hoverAkropol}}</span></code><br> -->
+    <button ng-click="audioStopAll()" u-space-top>stop all</button>
+    <!-- <button ng-click="audioStopAll();">stop all and play 2</button> -->
+    <!-- <button ng-click="audioStopAll();">stop all and play 3</button> -->
+    <!-- <button ng-click="audioStopAll();">stop all and play 4</button> -->
+  </figure>
+
+  <!-- Loader -->
+  <i class="loader fa fa-cog fa-spin"></i>
+
+  <!-- Map -->
+  <ng-include class="main-content" src="'partials/map.html'"></ng-include>
+
+  <!-- Agora -->
+  <main class="main" ng-controller="agoraController" ng-show="state === 1" ng-class="{'main--loaded' : loaded === true}">
+
+    <!-- Media -->
+    <figure class="gallery" ng-show="$parent.state === 1" ng-class="{'gallery--active' : $parent.state === 1}">
+      <div class="u-debug" ng-if="$parent.debug === true">
+        <code>state = <span>{{$parent.state}}</span></code><br>
+        <code>stateAgora = <span>{{stateAgora}}</span></code><br>
+        <code>optionAgora.name = <span>{{optionAgora.name}}</span></code><br>
+        <code>back = <span>{{back}}</span></code><br>
+        <code>galleryAgoraIndex = <span>{{galleryAgoraIndex}}</span></code><br>
+        <!-- <button ng-click="agoraState = 0">state 0</button> --><!-- why not work -->
+      </div>
+      <div class="gallery-wrapper">
+        <div class="gallery-wrapper__item" ng-repeat="item in dataAgora" ng-show="stateAgora === item.id" ng-class="{'gallery-wrapper__item--agora' : item.media.length === 0}">
+          <figure ng-repeat="child in item.media" ng-show="$parent.$parent.galleryAgoraIndex === $index + 1" ng-class="{'has-gallery' : item.media.length > 1}">
+            <div ng-bind-html="child.item"></div>
+            <figcaption ng-show="item.media.length === 1">
+              {{child.caption}}
+            </figcaption>
+          </figure>
+          <div class="gallery-controls" ng-show="item.media.length > 1">
+            <i class="gallery-controls__item" ng-repeat="child in item.media track by $index" ng-click="$parent.$parent.galleryAgoraIndex = $index + 1" ng-class="{'gallery-controls__item--active' : $parent.$parent.galleryAgoraIndex === $index + 1}">{{$index + 1}}</i>
+            <!-- <i class="gallery-controls__item" ng-click="$parent.galleryAgoraIndex = $index + 1" >></i> -->
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Data -->
+    <aside class="aside" role="main" ng-class="{'aside--active' : state !== 0}">
+      <i class="aside__bg"></i>
+      <figure ng-if="$parent.state === 1">
+        <h2><span>{{$parent.items[0].title}}</span></h2>
+        <div class="aside__scroll-container">
+          <div ng-include="'partials/agora.html'"></div>
+        </div>
+      </figure>
+    </aside>
+  </main>
+
+  <!-- Teatr -->
+  <main class="main" ng-controller="teatrController" ng-show="state === 2" ng-class="{'main--loaded' : loaded === true}">
+
+    <!-- Media -->
+    <figure class="gallery" ng-show="$parent.state === 2" ng-class="{'gallery--active' : $parent.state === 2}">
+      <div class="u-debug" ng-if="$parent.debug === true">
+        <code>state = <span>{{$parent.state}}</span></code><br>
+        <code>stateTeatr = <span>{{stateTeatr}}</span></code><br>
+        <code>optionAgora.name = <span>{{optionTeatr.name}}</span></code><br>
+        <code>back = <span>{{back}}</span></code><br>
+        <!-- <button ng-click="agoraState = 0">state 0</button> --><!-- why not work -->
+      </div>
+      <div class="gallery-wrapper">
+        <div class="gallery-wrapper__item" ng-repeat="item in dataTeatr" ng-show="stateTeatr === item.id" ng-class="{'gallery-wrapper__item--teatr' : item.media.length === 0}">
+          <figure ng-repeat="child in item.media" ng-show="$parent.$parent.galleryTeatrIndex === $index + 1" ng-class="{'has-gallery' : item.media.length > 1}">
+            <div ng-bind-html="child.item"></div>
+            <figcaption ng-show="item.media.length === 1">
+              {{child.caption}}
+            </figcaption>
+          </figure>
+          <div class="gallery-controls" ng-show="item.media.length > 1">
+            <i class="gallery-controls__item" ng-repeat="child in item.media track by $index" ng-click="$parent.$parent.galleryTeatrIndex = $index + 1" ng-class="{'gallery-controls__item--active' : $parent.$parent.galleryTeatrIndex === $index + 1}">{{$index + 1}}</i>
+            <!-- <i class="gallery-controls__item" ng-click="$parent.galleryTeatrIndex = $index + 1" >></i> -->
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Data -->
+    <aside class="aside" role="main" ng-class="{'aside--active' : state !== 0}">
+      <i class="aside__bg"></i>
+      <figure ng-if="$parent.state === 2">
+        <h2><span>{{$parent.items[1].title}}</span></h2>
+        <div class="aside__scroll-container">
+          <div ng-include="'partials/teatr.html'"></div>
+        </div>
+      </figure>
+    </aside>
+  </main>
+
+  <!-- Akropol -->
+  <main class="main" ng-controller="akropolController" ng-show="state === 3" ng-class="{'main--loaded' : loaded === true}">
+
+    <!-- Media -->
+    <figure class="gallery" ng-show="$parent.state === 3" ng-class="{'gallery--active' : $parent.state === 3}">
+      <div class="u-debug" ng-if="$parent.debug === true">
+        <code>state = <span>{{$parent.state}}</span></code><br>
+        <code>stateAkropol = <span>{{stateAkropol}}</span></code><br>
+        <code>optionAkropol.name = <span>{{optionAkropol.name}}</span></code><br>
+        <code>back = <span>{{back}}</span></code><br>
+        <button ng-click="agoraState = 0">state 0</button><!-- why not work -->
+      </div>
+      <div class="gallery-wrapper">
+        <div class="gallery-wrapper__item" ng-repeat="item in dataAkropol" ng-show="stateAkropol === item.id" ng-class="{'gallery-wrapper__item--akropol' : item.media.length === 0}">
+          <figure ng-repeat="child in item.media" ng-show="$parent.$parent.galleryAkropolIndex === $index + 1" ng-class="{'has-gallery' : item.media.length > 1}">
+            <div ng-bind-html="child.item"></div>
+          </figure>
+          <div class="gallery-controls" ng-show="item.media.length > 1">
+            <i class="gallery-controls__item" ng-repeat="child in item.media track by $index" ng-click="$parent.$parent.galleryAkropolIndex = $index + 1" ng-class="{'gallery-controls__item--active' : $parent.$parent.galleryAkropolIndex === $index + 1}">{{$index + 1}}</i>
+            <!-- <i class="gallery-controls__item" ng-click="$parent.galleryAkropolIndex = $index + 1" >></i> -->
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Data -->
+    <aside class="aside" role="main" ng-class="{'aside--active' : state !== 0}">
+      <i class="aside__bg"></i>
+      <figure ng-if="$parent.state === 3">
+        <h2><span>{{$parent.items[2].title}}</span></h2>
+        <div class="aside__scroll-container">
+          <div ng-include="'partials/akropol.html'"></div>
+        </div>
+      </figure>
+    </aside>
+  </main>
+
+  <!-- Gimnazjon -->
+  <main class="main" ng-controller="gimnazjonController" ng-show="state === 4" ng-class="{'main--loaded' : loaded === true}">
+
+    <!-- Media -->
+    <figure class="gallery" ng-show="$parent.state === 4" ng-class="{'gallery--active' : $parent.state === 4}">
+      <div class="u-debug" ng-if="$parent.debug === true">
+        <code>state = <span>{{$parent.state}}</span></code><br>
+        <code>stateGimnazjon = <span>{{stateGimnazjon}}</span></code><br>
+        <code>optionGimnazjon.name = <span>{{optionGimnazjon.name}}</span></code><br>
+        <code>back = <span>{{back}}</span></code><br>
+        <!-- <button ng-click="agoraState = 0">state 0</button> --><!-- why not work -->
+      </div>
+      <div class="gallery-wrapper">
+        <div class="gallery-wrapper__item" ng-repeat="item in dataGimnazjon" ng-show="stateGimnazjon === item.id" ng-class="{'gallery-wrapper__item--gimnazjon' : item.media.length === 0}">
+          <figure ng-repeat="child in item.media" ng-show="$parent.$parent.galleryGimnazjonIndex === $index + 1" ng-class="{'has-gallery' : item.media.length > 1}">
+            <div ng-bind-html="child.item"></div>
+          </figure>
+          <div class="gallery-controls" ng-show="item.media.length > 1">
+            <i class="gallery-controls__item" ng-repeat="child in item.media track by $index" ng-click="$parent.$parent.galleryGimnazjonIndex = $index + 1" ng-class="{'gallery-controls__item--active' : $parent.$parent.galleryGimnazjonIndex === $index + 1}">{{$index + 1}}</i>
+            <!-- <i class="gallery-controls__item" ng-click="$parent.galleryGimnazjonIndex = $index + 1" >></i> -->
+          </div>
+        </div>
+      </div>
+    </figure>
+
+    <!-- Data -->
+    <aside class="aside" role="main" ng-class="{'aside--active' : state !== 0}">
+      <i class="aside__bg"></i>
+      <figure ng-if="$parent.state === 4">
+        <h2><span>{{$parent.items[3].title}}</span></h2>
+        <div class="aside__scroll-container">
+          <div ng-include="'partials/gimnazjon.html'"></div>
+        </div>
+      </figure>
+    </aside>
+  </main>
+
+  <!-- Buttons -->
+  <figure class="toggle toggle--definition" ng-show="state !== 0" ng-class="{'toggle--loaded' : loaded === true}">
+    <button ng-click="mapReset(); audioStopAll()">wróć do mapy</button>
+    <button ng-if="audioMain[0].paused === true  && state === 1"  ng-click="audioStopAllAndPlay(0)"><i class="fa fa-play"></i></button>
+    <button ng-if="audioMain[0].paused === false && state === 1" ng-click="audioStopAll()"><i class="fa fa-pause"></i></button>
+    <button ng-if="audioMain[1].paused === true  && state === 2"  ng-click="audioStopAllAndPlay(1)"><i class="fa fa-play"></i></button>
+    <button ng-if="audioMain[1].paused === false && state === 2" ng-click="audioStopAll()"><i class="fa fa-pause"></i></button>
+    <button ng-if="audioMain[2].paused === true  && state === 3"  ng-click="audioStopAllAndPlay(2)"><i class="fa fa-play"></i></button>
+    <button ng-if="audioMain[2].paused === false && state === 3" ng-click="audioStopAll()"><i class="fa fa-pause"></i></button>
+    <button ng-if="audioMain[3].paused === true  && state === 4"  ng-click="audioStopAllAndPlay(3)"><i class="fa fa-play"></i></button>
+    <button ng-if="audioMain[3].paused === false && state === 4" ng-click="audioStopAll()"><i class="fa fa-pause"></i></button>
+  </figure>
+
+  <!-- Clouds -->
+  <i class="clouds"></i>
+
+  <!-- Vendor Scripts -->
+  <script src="js/min/angular.min.js"></script>
+  <script src="js/min/angular-animate.min.js"></script>
+  <script src="js/min/angular-sanitize.min.js"></script>
+  <script src="js/angular.audio.js"></script>
+
+  <!-- Angular App -->
+  <script src="js/app.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/controller-main.js"></script>
+  <script src="js/controller-agora.js"></script>
+  <script src="js/controller-teatr.js"></script>
+  <script src="js/controller-akropol.js"></script>
+  <script src="js/controller-gimnazjon.js"></script>
+  <!-- <script src="js/controller-akropol.js"></script> -->
+
+  <script>
+    document.onreadystatechange = function () {
+
+      var body = document.getElementById('body');
+
+      if (document.readyState === 'complete') {
+        body.classList.add('loaded');
+      }
+    }
+  </script>
+</body>
+</html>

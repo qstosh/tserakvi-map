@@ -1,0 +1,170 @@
+#inner-container{
+	width: 100% !important;
+	height: 100% !important;
+/*padding: 1em;*/
+	padding-top: 0.5em;
+}
+
+#middle-container {
+    height: 100%;
+
+}
+
+#playground {
+    /*overflow:auto;*/
+}
+
+#main-body{
+    width: 100%; 
+    height: 100%; 
+    position: relative; 
+    overflow: hidden; 
+    padding: 0;
+}
+
+.main-body-container{
+    padding: 1em; 
+    height: 100%; 
+    padding: 0; 
+    width: 100%; 
+    box-sizing:border-box; 
+    -moz-box-sizing:border-box;	
+}
+
+#inner-panel{
+    width: 100%; 
+    left:0;
+    box-sizing:border-box; 
+    -moz-box-sizing:border-box; 
+    padding: 0.5em;
+    
+    position: relative;
+}
+
+.header-question{
+    /*display: table-cell; */
+    clear: both;
+}
+
+.header-question .header-question-text{
+    /*display: table-cell; */
+    float:left;
+}
+
+
+
+.pairs .pair {
+    width:95%; 
+    margin:0;
+    padding:0.5em;
+    float:left;
+    margin-left:0;
+    border:2px dashed rgba(34, 82, 155, 0.0);
+    -webkit-border-radius:10px;
+    transition: background-color 300ms ease;
+    font-size:1em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+    position: relative; 
+    height: auto;
+    /*display: table-cell; */
+    float: left; 
+    text-align:center; 
+    box-sizing:border-box; 
+    -moz-box-sizing:border-box;
+}
+
+.pairs .pair img{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-bottom: 1em;	
+}
+
+.pairs .pair .sortable-item {
+    width: 47%;
+    position: relative;
+    padding: 0.5em 2em 0.5em 0.5em;
+    background-color: #eaecee;
+    transition: background-color 300ms ease;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+/*    border-top: 2px solid #e1e1e1;*/
+    color: #6A6A6A;
+    text-align: left;
+	padding-right: 2em;
+}
+
+.pairs .pair.correct {
+    background-color: #aceb69;
+}
+.pairs .pair.incorrect {
+    background-color: #f50b0b;
+}
+
+.pairs .pair .sortable-item.on{
+    transition: background-color 0.5s linear;
+}
+
+.pairs .pair .sortable-item {
+    width: 100%;
+    box-sizing:border-box; -moz-box-sizing:border-box;
+}
+
+
+
+.pairs .pair .ui-draggable-dragging {
+    background-color: #5E95BC;
+/*    border-top: 2px solid #386B8F;*/
+    color: white;
+    z-index:10;
+}
+
+.pair.active {
+    background-color:rgba(94, 149, 188, 0.23)
+}
+
+@keyframes blink {
+    0% {
+    background-color: rgba(138, 138, 138, 0.54);
+    color: white;
+}
+
+
+50% {
+    background-color: rgb(218, 218, 218);
+    color: black;
+}
+
+100% {
+    background-color: rgba(138, 138, 138, 0.54);
+    color: white;
+}  
+}
+
+/*.pair .sortable-item.blink{
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: 1;
+}*/
+
+.game-icon {
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	float: right;
+	height: 2em;
+	margin-right: -0.3em;
+	width: 2em;
+	position: absolute;
+	right: 2%;
+	top: 50%;
+	display: inline-block;
+	transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	-webkit-transform: translate(0,-50%);
+}

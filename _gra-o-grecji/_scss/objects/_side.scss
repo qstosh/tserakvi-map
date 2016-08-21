@@ -1,0 +1,39 @@
+side-block {
+
+	position: absolute;
+	top: 0;
+	width: 10vw;
+	z-index: 1;
+
+	h3 {
+
+		font-size: 1rem;
+	}
+
+	p {
+
+		font-size: .8rem;
+	}
+
+	&[left] {
+
+		left: 0;
+		margin-left: - $space;
+		transform: translateX(-100%);
+
+		figure {
+			margin-top: 0;
+		}
+	}
+
+	&[right] {
+
+		right: 0;
+		margin-right: - $space;
+		transform: translateX(100%);
+
+		figure {
+			margin-top: 0;
+		}
+	}
+}

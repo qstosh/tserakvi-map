@@ -1,0 +1,67 @@
+.test {
+
+  position: relative;
+
+  .important,
+  .side-note {
+
+    $w: 12rem;
+    position: absolute;
+    width: $w;
+    left: -$w - $space-double;
+    // background: $dim;
+  }
+}
+
+.side-note {
+
+  cursor: pointer;
+
+  &:after {
+
+    @extend %size-fill-parent;
+    content: "";
+    background: black;
+    z-index: 1;
+
+    @include animate-o($opacity: .6);
+  }
+
+  &:before {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    z-index: 2;
+    color: white;
+
+    will-change: transform;
+    transform: translate(-50%, -50%) scale(.7);
+
+    transition: transform .2s ease;
+  }
+
+  &:hover {
+
+    &:after {
+
+      opacity: .4;
+    }
+
+    &:before {
+
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  span {
+
+    position: absolute;
+    bottom: -$space-and-half;
+    right: 0;
+    font-size: $font-size-small;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,64 @@
+.Q09CloudInput {
+	.empty {
+		min-width: 3rem;
+	}
+	
+	.draggable-element {
+		cursor: grab;
+	}
+	
+	.drop-word {
+		border: 1px dashed $color-medium-dark;
+		border-radius: 3px;
+		cursor: default;
+		display: inline-flex;
+		justify-content: space-between;
+		line-height: 125%;
+		min-height: 1.2rem;
+		padding: 0.2rem 0.5rem;
+		white-space: nowrap;
+	}
+	
+	.icon {
+		cursor: pointer;
+		margin: auto 0 auto 0.5rem;
+		min-width: 1rem;
+	}
+	
+	.icon.disabled {
+		cursor: default;
+	}
+	
+	.empty .icon {
+		margin: auto 0;
+	}
+	
+	.options {
+		margin-bottom: -0.5rem;
+		line-height: initial;
+		padding-top: 1.5rem;
+	}
+	
+	.option {
+		background: $color-white;
+		border: 1px solid $color-medium-dark;
+		border-radius: 3px;
+		display: inline-block;
+		margin-right: 0.5rem;
+		margin-bottom: 0.5rem;
+		padding: 0.2rem 0.5rem;
+	}
+	
+	.question {
+		line-height: 200%;
+	}
+	
+	.ui-draggable-dragging {
+		cursor: grabbing;
+		z-index: 10;
+	}
+	
+	.ui-draggable-disabled {
+		cursor: default;
+	}
+}

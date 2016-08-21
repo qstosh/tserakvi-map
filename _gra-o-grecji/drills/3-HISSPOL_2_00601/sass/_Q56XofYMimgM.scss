@@ -1,0 +1,27 @@
+.Q56XofYMimgM {
+	img {
+		height: 12rem;
+	}
+	
+	.answers-list {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: space-around;
+		margin-bottom: -0.75rem;
+	}
+	
+	.answer {
+		margin-bottom: 0.75rem;
+		position: relative;
+	}
+	
+	.answer .icon {
+		bottom: 0.3rem;
+		position: absolute;
+		right: 0.3rem;
+	}
+	
+	.icon-ok, .icon-fail {
+		border: 1px solid $color-white;
+	}
+}

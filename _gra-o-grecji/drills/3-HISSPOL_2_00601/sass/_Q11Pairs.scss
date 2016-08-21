@@ -1,0 +1,54 @@
+.Q11Pairs {
+	.arrow-left, .arrow-right {
+		margin-top: -0.5rem;
+		position: absolute;
+		top: 50%;
+	}
+	
+	.arrow-left {
+		@include draw-triangle-left(0.5rem, 0.5rem, $color-light);
+		left: -0.5rem;
+	}
+	
+	.arrow-right {
+		@include draw-triangle-right(0.5rem, 0.5rem, $color-light);
+		right: -0.5rem;
+	}
+	
+	.left, .right {
+		background: $color-light;
+		border-radius: 3px;
+		cursor: grab;
+		padding: 0.2rem 0.5rem;
+		text-align: center;
+		width: 42.5%;
+	}
+	
+	.left, .right, .spacer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	.pair {
+		align-items: stretch;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.75rem;
+		position: relative;
+	}
+	
+	.pair:last-child {
+		margin-bottom: 0;
+	}
+	
+	.ui-draggable-dragging {
+		background: $color-medium-light;
+		cursor: grabbing;
+		z-index: 10;
+	}
+	
+	.ui-draggable-disabled {
+		cursor: default;
+	}
+}

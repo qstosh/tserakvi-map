@@ -1,0 +1,49 @@
+h1,
+h2,
+h3 {
+
+	font-weight: bold;
+	position: relative;
+
+	line-height: 1.2;
+	letter-spacing: .025em;
+
+	> [class*="icon-"] {
+
+		position: absolute;
+		left: -60px;
+		transform: scale(.75);
+	}
+
+	&:first-child {
+
+//		margin-top: 0;
+	}
+}
+
+$font-size-heading: 1.2rem;
+
+h1 {
+
+	font-size: ($font-size-heading * $phi) * $phi;
+	margin: ($space * 3) 0 ($space * 3);
+	text-align: center;
+	padding: 0 5vw;
+
+	&:first-of-type {
+
+		margin: (2.8rem) * 1.5 0;
+	}
+}
+
+h2 {
+
+	font-size: $font-size-heading * $phi;
+	margin: ($space * 2) 0 ($space * 2);
+}
+
+h3 {
+
+	font-size: $font-size-heading;
+	margin: $space-double 0 $space;
+}

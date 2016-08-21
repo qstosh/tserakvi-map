@@ -1,0 +1,90 @@
+.Q23ImgOnImg {
+	li {
+		height: 5rem;
+		width: 5rem;
+	}
+	
+	ul {
+		background: $color-light;
+		border-radius: 3px;
+		display: flex;	
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 0.2rem 0.5rem;
+	}
+	
+	.background {
+		background: $color-bg-grayout;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	
+	.img-container {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 100%;
+		position: relative;
+	}
+	
+	.pictures-container {
+		margin-top: 0.75rem;
+	}
+	
+	.preview {
+		left: 50%;
+		max-width: 60%;
+		max-height: 60%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.for-photo {
+		background: $color-white;
+		background-size: cover;
+		background-position: center;
+		border: 1px solid $color-white;
+		display: none;
+		height: 4rem;
+		position: absolute;
+		transform: translate(-30%, 5%);
+		width: 4rem;
+	}
+	
+	.icon {
+		font-size: 1.5rem;
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+	
+	.icon-cancel {
+		background: $color-white;
+		border: 1px solid $color-medium-dark;
+		color: $color-dark;
+	}
+	
+	.icon-ok {
+		border: 1px solid $color-white;
+	}
+	
+	.icon-fail {
+		border: 1px solid $color-white;
+	}
+	
+	.main-img {
+		max-width: 100%;
+	}
+	
+	.marker {
+		position: absolute;
+	}
+	
+	.to-drag {
+		background-size: cover !important;		// important?
+		background-position: center !important;
+		height: 100%;
+		width: 100%;
+	}
+}

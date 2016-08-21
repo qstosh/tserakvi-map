@@ -1,0 +1,60 @@
+.Q25Graph {
+	.color1 {
+		color: $color-light;
+		
+		.ui-slider-range {
+			background: $color-light;
+			height: 1rem;
+		}
+	}
+	
+	.color2 {
+		color: $color-medium-light;
+		
+		.ui-slider-range {
+			background: $color-medium-light;
+			height: 1rem;
+		}
+	}
+	
+	.color3 {
+		color: $color-medium-dark;
+		
+		.ui-slider-range {
+			background: $color-medium-dark;
+			height: 1rem;
+		}
+	}
+	
+	.color4 {
+		color: $color-dark;
+		
+		.ui-slider-range {
+			background: $color-dark;
+			height: 1rem;
+		}
+	}
+	
+	.grid {
+		position: relative;
+	}
+	
+	.grid-line {
+		background: $color-medium-light;
+		height: 100%;
+		position: absolute;
+		width: 1px;
+		z-index: 0;
+	}
+	
+	.grid-line-desc {
+		bottom: 0;
+		color: $color-medium-light;
+		position: absolute;
+	}
+	
+	.slider-container {
+		position: relative;
+		z-index: 1;
+	}
+}

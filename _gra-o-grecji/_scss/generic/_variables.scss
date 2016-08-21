@@ -1,0 +1,79 @@
+// Phi
+// $phi: 1.6180339887498948482;
+$phi: 1.62; // Thanks firefox!
+
+// Colors
+$gray:              hsl(0, 0%, 55%);
+$gray-light:        hsl(0, 0%, 75%);
+$gray-light-2:      hsl(0, 0%, 85%);
+$gray-light-3:      #ddd;
+$gray-med:          #666;
+$gray-dark:         #333;
+$gray-dark-2:       #131313;
+$white:             hsl(0, 0%, 98%);
+$black:             hsl(0, 0%, 3%);
+$dim:               rgba(0, 0, 0, 0.1);
+$dim-dark:          rgba(0, 0, 0, 0.3);
+$error:             #f00;
+$valid:             #089e00;
+$information:       #000db5;
+
+
+$important:         hsl(0, 80%, 50%);
+$blue:              hsl(207, 80%, 50%);
+$orange:            hsl(26, 80%, 50%);
+$purple:            hsl(272, 80%, 50%);
+
+
+// Typography
+$font:              "Open Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-primary:      $font;
+$font-secondary:    "Playfair Display", "Georgia", "Times New Roman", serif;
+
+$font-size-small:   .75rem;
+$font-size-small-2: 0.875rem;
+$font-size-med:     1rem;
+$font-size-med-2:   1.0625rem;
+$font-size-large:   1.4375rem;
+
+// Defaults
+$space:             1rem;
+$space-and-half:    $space * $phi;
+$space-double:      $space * (2 * $phi);
+$space-quad:        $space * (4 * $phi);
+$space-half:        $space / 2;
+$space-quater:		$space / 4;
+
+$pad:               $space;
+$pad-and-half:      $pad * (1.5 * $phi);
+$pad-double:        $pad * (2 * $phi);
+$pad-half:          $pad / 2;
+$pad-quarter:       $pad / 4;
+
+// Layout
+$max-width:             72rem;
+$text-column:           60ch;
+$text-column-fallback:  43rem;
+$width-scroll-bar:      $space * 3;
+
+// Borders
+$border-thin:   1px;
+$border-med:    3px;
+$border-thick:  7px;
+
+$border-radius: 4px;
+
+
+// Breakpoints
+$bp-small:          24rem;
+$bp-small-2:        29.75rem;
+$bp-small-3:        39.8rem;
+$bp-med:            46.8rem;
+$bp-med-2:          48rem;
+$bp-large:          50rem;
+$bp-large-2:        66rem;
+$bp-xl:             73rem;
+$bp-xxl:            89rem;
+$bp-xxxl:           93rem;
+
+// from

@@ -1,0 +1,711 @@
+html.polski {
+
+  &,
+  body {
+
+    position: fixed;
+    overflow: hidden;
+    background: #F0F8FE;
+    @extend %fullsize;
+  }
+
+  .button {
+
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: none;
+    border: 0;
+    padding: 0 $space;
+
+    will-change: transform;
+    transition: transform .2s ease;
+    color: $black;
+
+    &:focus {
+
+      outline: 0;
+    }
+
+    @include media(not-ipad) {
+
+      &:hover {
+
+        transform: scale(1.5);
+      }
+    }
+
+    &:active {
+
+      transform: scale(1.5);
+    }
+
+    &--disabled {
+
+      opacity: .2;
+      cursor: not-allowed;
+
+      &:hover {
+
+        transform: none;
+      }
+    }
+
+    &--right {
+
+      right: 0;
+    }
+  }
+
+  .svg-container {
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @include size(100vw, 100vh);
+
+    svg {
+
+      position: absolute;
+    }
+
+    #droga {
+
+      bottom: 0;
+      height: 500px;
+      transform-origin: left bottom;
+      transform: translate3d(0,0,0);
+
+      .foreground,
+      #background-1,
+      #background-2 {
+
+        will-change: transform;
+        transform: translate3d(0,0,0);
+        transition: transform 1.3s;
+      }
+    }
+
+    #samochod {
+
+      width: 260px;
+      bottom: 3rem;
+      left: 12vw;
+      transform: translateX(-50%);
+
+      .kolo {
+
+        will-change: transform;
+        transform-origin: 6px 6px;
+        // transition: transform .4s linear;
+      }
+
+      #kolo-2 {
+
+        transform: translateX(51px);
+      }
+    }
+
+    #_163983432 {
+
+      transform: translateY(15px);
+    }
+
+    &--state-1,
+    &--state-2,
+    &--state-3,
+    &--state-4 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-100px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-200px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-900px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-1 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-1 .4s linear 3.1;
+      }
+    }
+
+    &--state-5 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-200px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-400px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-2900px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-5 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-5  .4s linear 3.1;
+      }
+    }
+
+    &--state-6 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-300px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-600px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-4890px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-6 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-6  .4s linear 3.1;
+      }
+    }
+
+    &--state-7 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-400px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-800px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-6400px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-7 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-7  .4s linear 3.1;
+      }
+    }
+
+    &--state-8 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-500px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-1000px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-8080px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-8 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-8  .4s linear 3.1;
+      }
+    }
+
+    &--state-9 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-600px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-1200px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-9880px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-9 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-9  .4s linear 3.1;
+      }
+    }
+
+    &--state-10 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-700px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-1400px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-10900px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-10 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-10 .4s linear 3.1;
+      }
+    }
+
+    &--state-11 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-800px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-1600px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-11900px,0,0);
+        }
+      }
+
+      #samochod #kolo-1 {
+
+        animation: jazda-11 .4s linear 3.1;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-prawe-11 .4s linear 3.1;
+      }
+    }
+
+    &--state-12 {
+
+      #droga {
+
+        #background-1 {
+
+          transform: translate3d(-800px,0,0);
+        }
+
+        #background-2 {
+
+          transform: translate3d(-1600px,0,0);
+        }
+
+        .foreground {
+
+          transform: translate3d(-11900px,0,0);
+        }
+      }
+    }
+
+    &--going-backwards.svg-container--state-0 {
+
+      #samochod #kolo-1 {
+
+        animation: jazda-do-tylu-0 .4s linear 3.1 !important;
+      }
+
+      #samochod #kolo-2 {
+
+        animation: jazda-do-tylu-prawe-0 .4s linear 3.1 !important;
+      }
+    }
+
+    @for $i from 1 through 13 {
+
+      @if $i > 0 and $i < 4 {
+
+        &--going-backwards.svg-container--state-#{$i} {
+
+          #samochod #kolo-1 {
+
+            animation: none;
+          }
+
+          #samochod #kolo-2 {
+
+            animation: none;
+          }
+        }
+      } @else if $i >= 4 {
+
+        &--going-backwards.svg-container--state-#{$i} {
+
+          #samochod #kolo-1 {
+
+            animation: jazda-do-tylu-#{$i} .4s linear 3.1 !important;
+          }
+
+          #samochod #kolo-2 {
+
+            animation: jazda-do-tylu-prawe-#{$i} .4s linear 3.1 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .drill-container {
+
+    @include size(70vw,95vh);
+    position: absolute;
+    top: 50%;
+    right: $space * 3;
+    will-change: opacity;
+    opacity: 1;
+    transform: translate(0, -50%);
+    transition: transform .4s ease-out .2s, opacity .2s ease;
+
+    &,
+    &__drill {
+
+      position: absolute;
+      backface-visibility: hidden;
+    }
+
+    &--state-12 {
+
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &__drill {
+
+      will-change: transform, opacity;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s ease .3s;
+      padding: $space;
+      background: white;
+
+      border-radius: 6px;
+
+      &--no-background {
+
+        background: none;
+        content: 'asdsaddsgdsfgfsd';
+      }
+
+      .container--scroll {
+
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+        position: relative;
+        z-index: 10;
+
+        @extend %fullsize;
+      }
+
+      &--0 {
+
+
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        visibility: visible;
+        background: none;
+      }
+
+      .wrapper {
+
+        margin: 0 auto;
+        padding: 0 ($space * 3);
+
+        &--center {
+
+          @extend %center;
+          margin-top: -15px;
+        }
+
+        &--long {
+
+          padding: $space 0 $space * 2;
+          max-width: 100%;
+          width: 100%;
+
+          transform: none;
+          left: initial;
+          top: initial;
+          position: initial;
+        }
+
+        h1,
+        h2,
+        p {
+
+          &:first-child {
+
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    &--state-0 {
+
+      opacity: 1;
+
+      &-remove {
+
+        opacity: 0;
+        transform: translate(0, -2000px);
+      }
+
+      .drill--0 {
+
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    @for $i from 1 through 12 {
+
+      &--state-#{$i} {
+
+        opacity: 1;
+
+        &-remove {
+
+          opacity: 0;
+          transform: translate(0, -2000px);
+        }
+
+        .drill--#{$i} {
+
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    &--state-1,
+    &--state-2,
+    &--state-3 {
+
+      opacity: 1;
+
+      &-remove {
+
+        opacity: 0;
+        transform: translate(0, -50%) !important;
+        transition: opacity .15s ease;
+      }
+    }
+  }
+
+  .drill-container:not(.drill-container--state-0) {
+
+    .drill--0 {
+
+      opacity: 0;
+    }
+  }
+
+  h2 {
+
+    position: relative;
+    overflow: visible;
+
+    [class*="icon-"] {
+
+      position: absolute;
+      left: -48px;
+      top: 5px;
+    }
+  }
+
+  .biogram__image {
+
+    flex: 0 100px;
+
+    img {
+
+      width: 100px;
+    }
+  }
+
+  svg path[fill="#6BBC72"] {
+    transform-origin: left bottom;
+    transform: scaleX(1.08);
+  }
+}
+
+@for $i from 1 through 13 {
+
+  @keyframes jazda-#{$i} {
+
+    from {
+
+      transform: rotate(0deg);
+    }
+
+    to {
+
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@for $i from 1 through 13 {
+
+  @keyframes jazda-prawe-#{$i} {
+
+    from {
+
+      transform: translateX(51px) rotate(0deg);
+    }
+
+    to {
+
+      transform: translateX(51px) rotate(360deg);
+    }
+  }
+}
+
+@keyframes jazda-do-tylu-0 {
+
+  from {
+
+    transform: rotate(0deg);
+  }
+
+  to {
+
+    transform: rotate(-360deg);
+  }
+}
+
+
+@keyframes jazda-do-tylu-prawe-0 {
+
+  from {
+
+    transform: translateX(51px) rotate(0deg);
+  }
+
+  to {
+
+    transform: translateX(51px) rotate(-360deg);
+  }
+}
+
+@for $i from 1 through 13 {
+
+  @keyframes jazda-do-tylu-#{$i} {
+
+    from {
+
+      transform: rotate(0deg);
+    }
+
+    to {
+
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@for $i from 1 through 13 {
+
+  @keyframes jazda-do-tylu-prawe-#{$i} {
+
+    from {
+
+      transform: translateX(51px) rotate(0deg);
+    }
+
+    to {
+
+      transform: translateX(51px) rotate(-360deg);
+    }
+  }
+}

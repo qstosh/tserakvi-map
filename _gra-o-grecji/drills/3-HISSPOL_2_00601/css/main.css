@@ -1,0 +1,2229 @@
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../fonts/OpenSans-Bold-webfont.eot");
+  src: url("../fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold-webfont.woff") format("woff"), url("../fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansitalic';
+  src: url("../fonts/OpenSans-Italic-webfont.eot");
+  src: url("../fonts/OpenSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Italic-webfont.woff") format("woff"), url("../fonts/OpenSans-Italic-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Italic-webfont.svg#open_sansitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?-fj9o6d");
+  src: url("../fonts/icomoon.eot?#iefix-fj9o6d") format("embedded-opentype"), url("../fonts/icomoon.woff?-fj9o6d") format("woff"), url("../fonts/icomoon.ttf?-fj9o6d") format("truetype"), url("../fonts/icomoon.svg?-fj9o6d#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 49, ../sass/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 63, ../sass/_fonts.scss */
+.icon:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* line 70, ../sass/_fonts.scss */
+.icon-empty:before {
+  content: "\e600";
+}
+
+/* line 74, ../sass/_fonts.scss */
+.icon-selected:before {
+  content: "\e601";
+}
+
+/* line 78, ../sass/_fonts.scss */
+.icon-ok:before {
+  content: "\e602";
+}
+
+/* line 82, ../sass/_fonts.scss */
+.icon-fail:before {
+  content: "\e603";
+}
+
+/* line 86, ../sass/_fonts.scss */
+.icon-move-x:before {
+  content: "\e608";
+}
+
+/* line 90, ../sass/_fonts.scss */
+.icon-move-y:before {
+  content: "\e604";
+}
+
+/* line 94, ../sass/_fonts.scss */
+.icon-cancel:before {
+  content: "\e605";
+}
+
+/* line 98, ../sass/_fonts.scss */
+.icon-sound-on:before {
+  content: "\e606";
+}
+
+/* line 102, ../sass/_fonts.scss */
+.icon-sound-off:before {
+  content: "\e607";
+}
+
+/* line 106, ../sass/_fonts.scss */
+.icon-replay:before {
+  content: "\e609";
+}
+
+/* line 110, ../sass/_fonts.scss */
+.icon-next-empty:before {
+  content: "\e60a";
+}
+
+/* line 114, ../sass/_fonts.scss */
+.icon-back:before {
+  content: "\e60b";
+}
+
+/* line 118, ../sass/_fonts.scss */
+.icon-back-empty:before {
+  content: "\e60c";
+}
+
+/* line 122, ../sass/_fonts.scss */
+.icon-next:before {
+  content: "\e60d";
+}
+
+/* line 1, ../sass/_icons.scss */
+.icon {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+/* line 7, ../sass/_icons.scss */
+.icon-empty {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  color: #303333;
+}
+
+/* line 13, ../sass/_icons.scss */
+.icon-selected {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  color: #303333;
+}
+
+/* line 19, ../sass/_icons.scss */
+.icon-ok {
+  background: #77bd81;
+  color: #ffffff;
+}
+
+/* line 24, ../sass/_icons.scss */
+.icon-fail {
+  background: #ec6d63;
+  color: #ffffff;
+}
+
+/* line 29, ../sass/_icons.scss */
+.icon-move-x {
+  color: #303333;
+}
+
+/* line 33, ../sass/_icons.scss */
+.icon-move-y {
+  color: #303333;
+}
+
+/* line 37, ../sass/_icons.scss */
+.icon-cancel {
+  color: #7c8486;
+}
+
+/* line 41, ../sass/_icons.scss */
+.icon-sound-on {
+  color: #7c8486;
+}
+
+/* line 45, ../sass/_icons.scss */
+.icon-sound-off {
+  color: #7c8486;
+}
+
+/* line 49, ../sass/_icons.scss */
+.icon-replay {
+  color: #7c8486;
+}
+
+/* line 53, ../sass/_icons.scss */
+.icon-next {
+  color: #303333;
+}
+
+/* line 57, ../sass/_icons.scss */
+.icon-back {
+  color: #303333;
+}
+
+/* line 61, ../sass/_icons.scss */
+.icon-next-empty {
+  color: #d8dcdc;
+}
+
+/* line 65, ../sass/_icons.scss */
+.icon-back-empty {
+  color: #d8dcdc;
+}
+
+/* line 2, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud li {
+  background: #f1f2f5;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 12, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud li:last-child {
+  margin-bottom: 0;
+}
+/* line 16, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud li.ui-sortable-helper {
+  background: #d8dcdc !important;
+  border: 1px solid transparent;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: 10;
+}
+/* line 23, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud li.sortable-placeholder {
+  background: transparent !important;
+  border-width: 0 !important;
+  padding: 0;
+}
+/* line 29, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud li span {
+  -webkit-box-flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  text-align: center;
+}
+/* line 34, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud .button {
+  padding: 0.2rem 0.5rem;
+  width: 15rem;
+}
+/* line 39, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud .cell-content {
+  text-align: center;
+}
+/* line 43, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud .icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 1rem;
+}
+/* line 49, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud .tagcloud {
+  text-align: center;
+}
+/* line 53, ../sass/_E03Tagcloud.scss */
+.E03Tagcloud .tagcloud > span {
+  padding: 0.2rem 0.5rem;
+}
+
+/* line 2, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .answer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+}
+/* line 8, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .answer.correct, .E08SlotMachine .answer.incorrect {
+  opacity: 1;
+}
+/* line 12, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .element {
+  border-bottom: 1px solid #d8dcdc;
+}
+/* line 16, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .game-buttons-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1.75rem;
+}
+/* line 22, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunsliders {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.75rem;
+  overflow: hidden;
+}
+/* line 29, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunslider {
+  border-top: 1px solid #d8dcdc;
+  border-bottom: 1px solid #d8dcdc;
+  border-left: 1px solid #d8dcdc;
+  height: 1.4rem;
+  text-align: center;
+  width: 100%;
+}
+/* line 38, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunslider:last-child {
+  border-right: 1px solid #d8dcdc;
+}
+/* line 42, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunslider.animate .element {
+  -webkit-transition: margin 2s ease;
+          transition: margin 2s ease;
+}
+/* line 46, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunslider.animate.animate-time-1 .element {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+/* line 50, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunslider.animate.animate-time-2 .element {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+/* line 54, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunslider.animate.animate-time-3 .element {
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+/* line 58, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .gunslider.animate-fast .element {
+  -webkit-transition: margin 0.2s ease;
+          transition: margin 0.2s ease;
+  -webkit-transition-duration: 0.2s !important;
+          transition-duration: 0.2s !important;
+}
+/* line 63, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .icon {
+  margin: auto 0.6rem auto 0;
+}
+/* line 67, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .yes, .E08SlotMachine .no {
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  width: 5rem;
+}
+/* line 73, ../sass/_E08SlotMachine.scss */
+.E08SlotMachine .yes {
+  margin-right: 1.75rem;
+}
+
+/* line 2, ../sass/_Q01Crossword.scss */
+.Q01Crossword ol {
+  margin-top: 1.75rem;
+}
+/* line 6, ../sass/_Q01Crossword.scss */
+.Q01Crossword li {
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 13, ../sass/_Q01Crossword.scss */
+.Q01Crossword li:last-child {
+  margin-bottom: 0;
+}
+/* line 17, ../sass/_Q01Crossword.scss */
+.Q01Crossword li.active {
+  background: #f1f2f5;
+}
+/* line 21, ../sass/_Q01Crossword.scss */
+.Q01Crossword table {
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 28, ../sass/_Q01Crossword.scss */
+.Q01Crossword td {
+  vertical-align: middle;
+}
+/* line 32, ../sass/_Q01Crossword.scss */
+.Q01Crossword td.empty {
+  padding: 0.2rem 0.5rem;
+  text-align: right;
+}
+/* line 37, ../sass/_Q01Crossword.scss */
+.Q01Crossword input {
+  background: transparent;
+  border: none;
+  color: #303333;
+  font-family: "open_sansregular", Arial;
+  font-size: 16px;
+  line-height: 125%;
+  min-height: 1.2rem;
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  width: 1rem;
+}
+/* line 50, ../sass/_Q01Crossword.scss */
+.Q01Crossword .notempty {
+  border-top: 1px solid #d8dcdc;
+  border-bottom: 1px solid #d8dcdc;
+  border-left: 1px solid #d8dcdc;
+}
+/* line 56, ../sass/_Q01Crossword.scss */
+.Q01Crossword .last {
+  border-right: 1px solid #d8dcdc;
+}
+/* line 60, ../sass/_Q01Crossword.scss */
+.Q01Crossword .icon {
+  min-width: 1rem;
+}
+/* line 64, ../sass/_Q01Crossword.scss */
+.Q01Crossword .result {
+  background: #d8dcdc;
+}
+/* line 68, ../sass/_Q01Crossword.scss */
+.Q01Crossword .question-text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 0.4rem;
+}
+
+/* line 2, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg table {
+  border-collapse: separate;
+  border-spacing: 0 3px;
+  margin: 0 auto 1.75rem auto;
+}
+/* line 8, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg td {
+  vertical-align: middle;
+}
+/* line 12, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg td.empty {
+  padding: 0.2rem 0.5rem;
+  text-align: right;
+}
+/* line 17, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg img {
+  margin: 0 auto 1.75rem auto;
+  max-height: 30rem;
+  max-width: 100%;
+}
+/* line 23, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg input {
+  background: transparent;
+  border: none;
+  color: #303333;
+  font-family: "open_sansregular", Arial;
+  font-size: 16px;
+  line-height: 125%;
+  min-height: 1.2rem;
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  width: 1rem;
+}
+/* line 36, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .button-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 41, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .notempty {
+  border-top: 1px solid #d8dcdc;
+  border-bottom: 1px solid #d8dcdc;
+  border-left: 1px solid #d8dcdc;
+}
+/* line 47, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .last {
+  border-right: 1px solid #d8dcdc;
+}
+/* line 51, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .button {
+  padding: 0.2rem 0.5rem;
+}
+/* line 55, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  min-width: 1rem;
+}
+/* line 65, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .prev-button {
+  margin-right: 1.75rem;
+}
+/* line 69, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .prev-button, .Q02CrosswordImg .next-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+}
+/* line 74, ../sass/_Q02CrosswordImg.scss */
+.Q02CrosswordImg .result {
+  background: #d8dcdc;
+}
+
+/* line 2, ../sass/_Q03XofY.scss */
+.Q03XofY li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+/* line 7, ../sass/_Q03XofY.scss */
+.Q03XofY li:last-child {
+  padding-bottom: 0;
+}
+/* line 11, ../sass/_Q03XofY.scss */
+.Q03XofY li span:last-child {
+  padding-left: 0.6rem;
+}
+/* line 15, ../sass/_Q03XofY.scss */
+.Q03XofY .icon {
+  min-width: 1rem;
+  -webkit-transform: translate(0, 10%);
+      -ms-transform: translate(0, 10%);
+          transform: translate(0, 10%);
+}
+
+/* line 2, ../sass/_Q04XofYM.scss */
+.Q04XofYM li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+/* line 10, ../sass/_Q04XofYM.scss */
+.Q04XofYM li:last-child {
+  padding-bottom: 0;
+}
+/* line 14, ../sass/_Q04XofYM.scss */
+.Q04XofYM li span:last-child {
+  padding-left: 0.6rem;
+}
+/* line 18, ../sass/_Q04XofYM.scss */
+.Q04XofYM .icon {
+  min-width: 1rem;
+  -ms-transform: translate(0, 10%);
+      transform: translate(0, 10%);
+  -moz-transform: translate(0, 10%);
+  -webkit-transform: translate(0, 10%);
+}
+
+/* line 2, ../sass/_Q05XofYImgM.scss */
+.Q05XofYImgM .game-panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 6, ../sass/_Q05XofYImgM.scss */
+.Q05XofYImgM img {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  max-height: 30rem;
+  width: 40%;
+}
+/* line 12, ../sass/_Q05XofYImgM.scss */
+.Q05XofYImgM ul {
+  width: 60%;
+}
+/* line 16, ../sass/_Q05XofYImgM.scss */
+.Q05XofYImgM li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+/* line 24, ../sass/_Q05XofYImgM.scss */
+.Q05XofYImgM li:last-child {
+  padding-bottom: 0;
+}
+/* line 28, ../sass/_Q05XofYImgM.scss */
+.Q05XofYImgM li span:last-child {
+  padding-left: 0.6rem;
+  padding-right: 1.75rem;
+}
+/* line 33, ../sass/_Q05XofYImgM.scss */
+.Q05XofYImgM .icon {
+  min-width: 1rem;
+  -ms-transform: translate(0, 10%);
+      transform: translate(0, 10%);
+  -moz-transform: translate(0, 10%);
+  -webkit-transform: translate(0, 10%);
+}
+
+/* line 2, ../sass/_Q06Order.scss */
+.Q06Order li {
+  background: #f1f2f5;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 12, ../sass/_Q06Order.scss */
+.Q06Order li:last-child {
+  margin-bottom: 0;
+}
+/* line 16, ../sass/_Q06Order.scss */
+.Q06Order li.ui-sortable-helper {
+  background: #d8dcdc !important;
+  border: 1px solid transparent;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: 10;
+}
+/* line 23, ../sass/_Q06Order.scss */
+.Q06Order li.sortable-placeholder {
+  background: transparent !important;
+  border-width: 0 !important;
+  padding: 0;
+}
+/* line 29, ../sass/_Q06Order.scss */
+.Q06Order .text {
+  -webkit-box-flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  padding-right: 0.5rem;
+  text-align: center;
+}
+/* line 35, ../sass/_Q06Order.scss */
+.Q06Order .icon {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* line 40, ../sass/_Q06Order.scss */
+.Q06Order .ui-sortable-disabled li {
+  cursor: default;
+}
+
+/* line 2, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg figure {
+  margin: auto;
+}
+/* line 6, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .game-panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 10, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .bottom {
+  background: #f1f2f5;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 21, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .icon {
+  margin: 0.2rem auto 0 auto;
+}
+/* line 25, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .pair {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/* line 30, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .pair:last-child .bottom {
+  margin: 0;
+}
+/* line 34, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .ui-draggable {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+/* line 38, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .ui-draggable-disabled {
+  cursor: default;
+}
+/* line 42, ../sass/_Q07OrderImg.scss */
+.Q07OrderImg .ui-draggable-dragging {
+  background: #d8dcdc;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: 10;
+}
+
+/* line 2, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .game-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 9, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .left {
+  padding-right: 1.75rem;
+  width: 60%;
+}
+/* line 14, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .right {
+  padding-top: 1.8rem;
+  width: 40%;
+}
+/* line 19, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .group {
+  background: #d8dcdc;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  min-height: 10rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+/* line 28, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .group:last-child {
+  margin-bottom: 0;
+}
+/* line 32, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .group-name {
+  margin-bottom: 0.5rem;
+}
+/* line 36, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .option {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 46, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .word {
+  background: #ffffff;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 55, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .icon {
+  cursor: pointer;
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+}
+/* line 61, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .icon.disabled {
+  cursor: default;
+}
+/* line 65, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .draggable-element {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+/* line 69, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .group .draggable-element {
+  cursor: default;
+}
+/* line 73, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .ui-draggable-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: 10;
+}
+/* line 78, ../sass/_Q08CloudInputGroup.scss */
+.Q08CloudInputGroup .ui-draggable-disabled {
+  cursor: default;
+}
+
+/* line 2, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .empty {
+  min-width: 3rem;
+}
+/* line 6, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .draggable-element {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+/* line 10, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .drop-word {
+  border: 1px dashed #7c8486;
+  border-radius: 3px;
+  cursor: default;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 125%;
+  min-height: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+/* line 22, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .icon {
+  cursor: pointer;
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+}
+/* line 28, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .icon.disabled {
+  cursor: default;
+}
+/* line 32, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .empty .icon {
+  margin: auto 0;
+}
+/* line 36, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .options {
+  margin-bottom: -0.5rem;
+  line-height: initial;
+  padding-top: 1.5rem;
+}
+/* line 42, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .option {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 52, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .question {
+  line-height: 200%;
+}
+/* line 56, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .ui-draggable-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: 10;
+}
+/* line 61, ../sass/_Q09CloudInput.scss */
+.Q09CloudInput .ui-draggable-disabled {
+  cursor: default;
+}
+
+/* line 2, ../sass/_Q10TextInput.scss */
+.Q10TextInput input {
+  background: #f1f2f5;
+  border: none;
+  border-radius: 3px;
+  color: #303333;
+  font-family: "open_sansregular", Arial;
+  font-size: 16px;
+  line-height: 125%;
+  max-width: 30rem;
+  min-height: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  width: 10rem;
+}
+/* line 16, ../sass/_Q10TextInput.scss */
+.Q10TextInput .for-text {
+  display: inline-block;
+  position: relative;
+}
+/* line 21, ../sass/_Q10TextInput.scss */
+.Q10TextInput .icon {
+  display: inline-block;
+  margin-left: 0.2rem;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-30%, -50%);
+      -ms-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+}
+/* line 30, ../sass/_Q10TextInput.scss */
+.Q10TextInput .question {
+  line-height: 200%;
+}
+
+/* line 2, ../sass/_Q11Pairs.scss */
+.Q11Pairs .arrow-left, .Q11Pairs .arrow-right {
+  margin-top: -0.5rem;
+  position: absolute;
+  top: 50%;
+}
+/* line 8, ../sass/_Q11Pairs.scss */
+.Q11Pairs .arrow-left {
+  border-top: 0.5rem solid transparent;
+  border-right: 0.5rem solid #f1f2f5;
+  border-bottom: 0.5rem solid transparent;
+  height: 0;
+  width: 0;
+  left: -0.5rem;
+}
+/* line 13, ../sass/_Q11Pairs.scss */
+.Q11Pairs .arrow-right {
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.5rem solid #f1f2f5;
+  height: 0;
+  width: 0;
+  right: -0.5rem;
+}
+/* line 18, ../sass/_Q11Pairs.scss */
+.Q11Pairs .left, .Q11Pairs .right {
+  background: #f1f2f5;
+  border-radius: 3px;
+  cursor: -webkit-grab;
+  cursor: grab;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  width: 42.5%;
+}
+/* line 27, ../sass/_Q11Pairs.scss */
+.Q11Pairs .left, .Q11Pairs .right, .Q11Pairs .spacer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 33, ../sass/_Q11Pairs.scss */
+.Q11Pairs .pair {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+/* line 41, ../sass/_Q11Pairs.scss */
+.Q11Pairs .pair:last-child {
+  margin-bottom: 0;
+}
+/* line 45, ../sass/_Q11Pairs.scss */
+.Q11Pairs .ui-draggable-dragging {
+  background: #d8dcdc;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: 10;
+}
+/* line 51, ../sass/_Q11Pairs.scss */
+.Q11Pairs .ui-draggable-disabled {
+  cursor: default;
+}
+
+/* line 2, ../sass/_Q12PairsImg.scss */
+.Q12PairsImg img {
+  display: inline;
+}
+/* line 6, ../sass/_Q12PairsImg.scss */
+.Q12PairsImg .game-panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 10, ../sass/_Q12PairsImg.scss */
+.Q12PairsImg .bottom {
+  background: #f1f2f5;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 19, ../sass/_Q12PairsImg.scss */
+.Q12PairsImg .icon {
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+}
+/* line 24, ../sass/_Q12PairsImg.scss */
+.Q12PairsImg .pair {
+  -webkit-align-self: baseline;
+      -ms-flex-item-align: baseline;
+          align-self: baseline;
+  margin-right: 0.75rem;
+}
+/* line 29, ../sass/_Q12PairsImg.scss */
+.Q12PairsImg .pair:last-child {
+  margin: 0;
+}
+/* line 33, ../sass/_Q12PairsImg.scss */
+.Q12PairsImg .ui-draggable-dragging {
+  background: #d8dcdc;
+  z-index: 10;
+}
+
+/* line 2, ../sass/_Q13SelectInText.scss */
+.Q13SelectInText .drop-word {
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 125%;
+  min-height: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+/* line 13, ../sass/_Q13SelectInText.scss */
+.Q13SelectInText .icon {
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+}
+/* line 18, ../sass/_Q13SelectInText.scss */
+.Q13SelectInText .question {
+  line-height: 200%;
+}
+
+/* line 2, ../sass/_Q14Map.scss */
+.Q14Map .icon {
+  cursor: pointer;
+  position: absolute;
+}
+/* line 7, ../sass/_Q14Map.scss */
+.Q14Map .icon-ok, .Q14Map .icon-fail {
+  border: 1px solid #ffffff;
+}
+/* line 11, ../sass/_Q14Map.scss */
+.Q14Map .icon.disabled {
+  cursor: default;
+}
+/* line 15, ../sass/_Q14Map.scss */
+.Q14Map .main-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+}
+/* line 22, ../sass/_Q14Map.scss */
+.Q14Map .main-img {
+  max-width: 100%;
+}
+
+/* line 2, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg input {
+  background: #f1f2f5;
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  color: #303333;
+  font-family: "open_sansregular", Arial;
+  font-size: 16px;
+  line-height: 125%;
+  max-width: 10rem;
+  min-height: 1.2rem;
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  width: 10rem;
+}
+/* line 17, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .empty input {
+  display: none;
+}
+/* line 21, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .notempty input, .Q15TextInputImg .show-correct input {
+  display: inline-block;
+}
+/* line 25, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .icon {
+  font-size: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  width: 1.5rem;
+}
+/* line 32, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .icon-ok {
+  border: 1px solid #ffffff;
+}
+/* line 36, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .icon-fail {
+  border: 1px solid #ffffff;
+}
+/* line 40, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .input-text-container {
+  position: relative;
+  -webkit-transform: translate(-43.5%);
+      -ms-transform: translate(-43.5%);
+          transform: translate(-43.5%);
+}
+/* line 45, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .main-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+}
+/* line 52, ../sass/_Q15TextInputImg.scss */
+.Q15TextInputImg .main-img {
+  max-width: 100%;
+}
+
+/* line 2, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .game-panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 6, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .icon {
+  font-size: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  width: 1.5rem;
+}
+/* line 13, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .icon-cancel {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  color: #303333;
+}
+/* line 19, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .icon-ok {
+  border: 1px solid #ffffff;
+}
+/* line 23, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .icon-fail {
+  border: 1px solid #ffffff;
+}
+/* line 27, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .main-container {
+  max-width: 60%;
+  margin-right: 1.75rem;
+  position: relative;
+}
+/* line 33, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .main-img {
+  max-width: 100%;
+}
+/* line 37, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .notempty:after {
+  background: #ffffff;
+  border-radius: 3px;
+  content: attr(data-word-inserted-text);
+  color: #303333;
+  display: inline-block;
+  font-family: "open_sansregular", Arial;
+  font-size: 16px;
+  line-height: 1.25rem;
+  padding: 0.2rem 0.5rem;
+  -webkit-transform: translate(-32.5%);
+      -ms-transform: translate(-32.5%);
+          transform: translate(-32.5%);
+}
+/* line 50, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .option {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 60, ../sass/_Q16CloudInputImg.scss */
+.Q16CloudInputImg .options {
+  margin-bottom: -0.5rem;
+}
+
+/* line 2, ../sass/_Q18XofYAudioM.scss */
+.Q18XofYAudioM li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+/* line 10, ../sass/_Q18XofYAudioM.scss */
+.Q18XofYAudioM li:last-child {
+  padding-bottom: 0;
+}
+/* line 14, ../sass/_Q18XofYAudioM.scss */
+.Q18XofYAudioM li span:last-child {
+  padding-left: 0.6rem;
+}
+/* line 18, ../sass/_Q18XofYAudioM.scss */
+.Q18XofYAudioM .icon {
+  min-width: 1rem;
+  -ms-transform: translate(0, 10%);
+      transform: translate(0, 10%);
+  -moz-transform: translate(0, 10%);
+  -webkit-transform: translate(0, 10%);
+}
+
+/* line 2, ../sass/_Q19XofYAudioMimgM.scss */
+.Q19XofYAudioMimgM img {
+  height: 12rem;
+}
+/* line 6, ../sass/_Q19XofYAudioMimgM.scss */
+.Q19XofYAudioMimgM .answers-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-bottom: -0.75rem;
+}
+/* line 13, ../sass/_Q19XofYAudioMimgM.scss */
+.Q19XofYAudioMimgM .answer {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+/* line 18, ../sass/_Q19XofYAudioMimgM.scss */
+.Q19XofYAudioMimgM .answer .icon {
+  position: absolute;
+  -webkit-transform: translate(10%, -110%);
+      -ms-transform: translate(10%, -110%);
+          transform: translate(10%, -110%);
+}
+/* line 23, ../sass/_Q19XofYAudioMimgM.scss */
+.Q19XofYAudioMimgM .icon-ok {
+  border: 1px solid #ffffff;
+}
+/* line 27, ../sass/_Q19XofYAudioMimgM.scss */
+.Q19XofYAudioMimgM .icon-fail {
+  border: 1px solid #ffffff;
+}
+
+/* line 2, ../sass/_Q21Timeline.scss */
+.Q21Timeline .dragging-list {
+  margin-bottom: -0.5rem;
+}
+/* line 6, ../sass/_Q21Timeline.scss */
+.Q21Timeline .dragging-list .icon {
+  display: none;
+}
+/* line 10, ../sass/_Q21Timeline.scss */
+.Q21Timeline .to-drag {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 20, ../sass/_Q21Timeline.scss */
+.Q21Timeline .timeline {
+  background: #7c8486;
+  height: 0.25rem;
+  position: relative;
+}
+/* line 26, ../sass/_Q21Timeline.scss */
+.Q21Timeline .timeline-label {
+  background: #d8dcdc;
+  height: 1rem;
+  position: absolute;
+  width: 1px;
+}
+/* line 33, ../sass/_Q21Timeline.scss */
+.Q21Timeline .timeline-marker {
+  position: absolute;
+}
+/* line 37, ../sass/_Q21Timeline.scss */
+.Q21Timeline .user-marker-container {
+  position: absolute;
+}
+/* line 41, ../sass/_Q21Timeline.scss */
+.Q21Timeline .user-marker-label {
+  border: 1px dashed #7c8486;
+  border-radius: 3px;
+  position: absolute;
+}
+/* line 47, ../sass/_Q21Timeline.scss */
+.Q21Timeline .user-marker-line {
+  background: #f1f2f5;
+  position: absolute;
+  width: 1px;
+}
+/* line 53, ../sass/_Q21Timeline.scss */
+.Q21Timeline .user-marker-year {
+  position: absolute;
+}
+
+/* line 2, ../sass/_Q22MapColor.scss */
+.Q22MapColor li {
+  background: #f1f2f5;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 10, ../sass/_Q22MapColor.scss */
+.Q22MapColor .color {
+  border-radius: 3px;
+  height: 1rem;
+  margin: auto 0.5rem auto 0;
+  width: 1rem;
+}
+
+/* line 2, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg li {
+  height: 5rem;
+  width: 5rem;
+}
+/* line 7, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg ul {
+  background: #f1f2f5;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  padding: 0.2rem 0.5rem;
+}
+/* line 16, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .background {
+  background: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 24, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .img-container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  position: relative;
+}
+/* line 31, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .pictures-container {
+  margin-top: 0.75rem;
+}
+/* line 35, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .preview {
+  left: 50%;
+  max-width: 60%;
+  max-height: 60%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/* line 44, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .for-photo {
+  background: #ffffff;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ffffff;
+  display: none;
+  height: 4rem;
+  position: absolute;
+  -webkit-transform: translate(-30%, 5%);
+      -ms-transform: translate(-30%, 5%);
+          transform: translate(-30%, 5%);
+  width: 4rem;
+}
+/* line 56, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .icon {
+  font-size: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+/* line 62, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .icon-cancel {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  color: #303333;
+}
+/* line 68, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .icon-ok {
+  border: 1px solid #ffffff;
+}
+/* line 72, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .icon-fail {
+  border: 1px solid #ffffff;
+}
+/* line 76, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .main-img {
+  max-width: 100%;
+}
+/* line 80, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .marker {
+  position: absolute;
+}
+/* line 84, ../sass/_Q23ImgOnImg.scss */
+.Q23ImgOnImg .to-drag {
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 2, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .drawing-container {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+/* line 12, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .img-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 17, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .icon {
+  font-size: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+/* line 23, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .icon-ok {
+  border: 1px solid #ffffff;
+}
+/* line 27, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .icon-fail {
+  border: 1px solid #ffffff;
+}
+/* line 31, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .main-container {
+  position: relative;
+}
+/* line 35, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .marker {
+  position: absolute;
+}
+/* line 39, ../sass/_Q24DrawLine.scss */
+.Q24DrawLine .marker-inside {
+  margin: -50% 0 0 -50%;
+}
+
+/* line 2, ../sass/_Q25Graph.scss */
+.Q25Graph .color1 {
+  color: #f1f2f5;
+}
+/* line 5, ../sass/_Q25Graph.scss */
+.Q25Graph .color1 .ui-slider-range {
+  background: #f1f2f5;
+  height: 1rem;
+}
+/* line 11, ../sass/_Q25Graph.scss */
+.Q25Graph .color2 {
+  color: #d8dcdc;
+}
+/* line 14, ../sass/_Q25Graph.scss */
+.Q25Graph .color2 .ui-slider-range {
+  background: #d8dcdc;
+  height: 1rem;
+}
+/* line 20, ../sass/_Q25Graph.scss */
+.Q25Graph .color3 {
+  color: #7c8486;
+}
+/* line 23, ../sass/_Q25Graph.scss */
+.Q25Graph .color3 .ui-slider-range {
+  background: #7c8486;
+  height: 1rem;
+}
+/* line 29, ../sass/_Q25Graph.scss */
+.Q25Graph .color4 {
+  color: #303333;
+}
+/* line 32, ../sass/_Q25Graph.scss */
+.Q25Graph .color4 .ui-slider-range {
+  background: #303333;
+  height: 1rem;
+}
+/* line 38, ../sass/_Q25Graph.scss */
+.Q25Graph .grid {
+  position: relative;
+}
+/* line 42, ../sass/_Q25Graph.scss */
+.Q25Graph .grid-line {
+  background: #d8dcdc;
+  height: 100%;
+  position: absolute;
+  width: 1px;
+  z-index: 0;
+}
+/* line 50, ../sass/_Q25Graph.scss */
+.Q25Graph .grid-line-desc {
+  bottom: 0;
+  color: #d8dcdc;
+  position: absolute;
+}
+/* line 56, ../sass/_Q25Graph.scss */
+.Q25Graph .slider-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 3, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox th, .Q28TableCheckbox td {
+  border: 1px solid #d8dcdc;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 10, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox tr:first-child th {
+  border-top: 0;
+}
+/* line 14, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox tr:last-child td {
+  border-bottom: 0;
+}
+/* line 18, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox tr td:first-child, .Q28TableCheckbox tr th:first-child {
+  border-left: 0;
+}
+/* line 22, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox tr td:last-child, .Q28TableCheckbox tr th:last-child {
+  border-right: 0;
+}
+/* line 26, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 31, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox .icon {
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+}
+/* line 36, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox .only-icon {
+  margin: auto;
+}
+/* line 41, ../sass/_Q28TableCheckbox.scss */
+.Q28TableCheckbox .table {
+  width: 100%;
+}
+
+/* line 2, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping th, .Q33TableTyping td {
+  border: 1px solid #d8dcdc;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 9, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping tr:first-child th {
+  border-top: 0;
+}
+/* line 13, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping tr:last-child td {
+  border-bottom: 0;
+}
+/* line 17, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping tr td:first-child, .Q33TableTyping tr th:first-child {
+  border-left: 0;
+}
+/* line 21, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping tr td:last-child, .Q33TableTyping tr th:last-child {
+  border-right: 0;
+}
+/* line 25, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping input {
+  background: #f1f2f5;
+  border: none;
+  border-radius: 3px;
+  color: #303333;
+  font-family: "open_sansregular", Arial;
+  font-size: 16px;
+  line-height: 125%;
+  min-height: 1.2rem;
+  padding: 0.2rem 2rem 0.2rem 0.5rem;
+  width: 90%;
+}
+/* line 39, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+/* line 45, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping .icon {
+  display: none;
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-30%, -50%);
+      -ms-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+}
+/* line 55, ../sass/_Q33TableTyping.scss */
+.Q33TableTyping .table {
+  width: 100%;
+}
+
+/* line 2, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop th, .Q34TableDraganddrop td {
+  border: 1px solid #d8dcdc;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 9, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop tr:first-child th {
+  border-top: 0;
+}
+/* line 13, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop tr:last-child td {
+  border-bottom: 0;
+}
+/* line 17, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop tr td:first-child, .Q34TableDraganddrop tr th:first-child {
+  border-left: 0;
+}
+/* line 21, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop tr td:last-child, .Q34TableDraganddrop tr th:last-child {
+  border-right: 0;
+}
+/* line 25, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop .dragging {
+  margin-top: 1.75rem;
+  margin-bottom: -0.5rem;
+}
+/* line 30, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop .icon {
+  display: none;
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+}
+/* line 36, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop td .icon {
+  display: block;
+}
+/* line 40, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop .to-drag {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 50, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop td .to-drag {
+  margin: 0;
+  width: 90%;
+}
+/* line 55, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop .table {
+  width: 100%;
+}
+/* line 59, ../sass/_Q34TableDraganddrop.scss */
+.Q34TableDraganddrop .text {
+  -webkit-box-flex: 100%;
+  -webkit-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  text-align: left;
+}
+
+/* line 2, ../sass/_Q44TextColor.scss */
+.Q44TextColor p:first-of-type {
+  margin-top: 1.75rem;
+}
+/* line 6, ../sass/_Q44TextColor.scss */
+.Q44TextColor p:last-of-type {
+  margin-bottom: 0;
+}
+/* line 10, ../sass/_Q44TextColor.scss */
+.Q44TextColor .playground {
+  line-height: 200%;
+}
+/* line 14, ../sass/_Q44TextColor.scss */
+.Q44TextColor .answer-box {
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 125%;
+  min-height: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  white-space: nowrap;
+}
+/* line 25, ../sass/_Q44TextColor.scss */
+.Q44TextColor .color-display {
+  border-radius: 3px;
+  height: 1rem;
+  margin: auto 0.5rem auto 0;
+  width: 1rem;
+}
+/* line 32, ../sass/_Q44TextColor.scss */
+.Q44TextColor .color-name {
+  background: #f1f2f5;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.5rem;
+}
+/* line 40, ../sass/_Q44TextColor.scss */
+.Q44TextColor .color-picker {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  line-height: initial;
+  margin-bottom: -0.75rem;
+}
+/* line 48, ../sass/_Q44TextColor.scss */
+.Q44TextColor div.icon {
+  margin: auto 0.5rem auto 0;
+  min-width: 1rem;
+}
+/* line 53, ../sass/_Q44TextColor.scss */
+.Q44TextColor .icon-ok, .Q44TextColor .icon-fail {
+  border: 1px solid #ffffff;
+}
+/* line 57, ../sass/_Q44TextColor.scss */
+.Q44TextColor span.icon {
+  margin: auto 0 auto 0.5rem;
+  min-width: 1rem;
+}
+
+/* line 2, ../sass/_Q50XofYImg.scss */
+.Q50XofYImg .game-panel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 6, ../sass/_Q50XofYImg.scss */
+.Q50XofYImg img {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  max-height: 30rem;
+  width: 40%;
+}
+/* line 12, ../sass/_Q50XofYImg.scss */
+.Q50XofYImg ul {
+  width: 60%;
+}
+/* line 16, ../sass/_Q50XofYImg.scss */
+.Q50XofYImg li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+/* line 24, ../sass/_Q50XofYImg.scss */
+.Q50XofYImg li:last-child {
+  padding-bottom: 0;
+}
+/* line 28, ../sass/_Q50XofYImg.scss */
+.Q50XofYImg li span:last-child {
+  padding-left: 0.6rem;
+  padding-right: 1.75rem;
+}
+/* line 33, ../sass/_Q50XofYImg.scss */
+.Q50XofYImg .icon {
+  min-width: 1rem;
+  -ms-transform: translate(0, 10%);
+      transform: translate(0, 10%);
+  -moz-transform: translate(0, 10%);
+  -webkit-transform: translate(0, 10%);
+}
+
+/* line 2, ../sass/_Q51XofYAudio.scss */
+.Q51XofYAudio li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+/* line 10, ../sass/_Q51XofYAudio.scss */
+.Q51XofYAudio li:last-child {
+  padding-bottom: 0;
+}
+/* line 14, ../sass/_Q51XofYAudio.scss */
+.Q51XofYAudio li span:last-child {
+  padding-left: 0.6rem;
+}
+/* line 18, ../sass/_Q51XofYAudio.scss */
+.Q51XofYAudio .icon {
+  min-width: 1rem;
+  -ms-transform: translate(0, 10%);
+      transform: translate(0, 10%);
+  -moz-transform: translate(0, 10%);
+  -webkit-transform: translate(0, 10%);
+}
+
+/* line 2, ../sass/_Q55XofYMimg.scss */
+.Q55XofYMimg img {
+  height: 12rem;
+}
+/* line 6, ../sass/_Q55XofYMimg.scss */
+.Q55XofYMimg .answers-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-bottom: -0.75rem;
+}
+/* line 13, ../sass/_Q55XofYMimg.scss */
+.Q55XofYMimg .answer {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+/* line 18, ../sass/_Q55XofYMimg.scss */
+.Q55XofYMimg .answer .icon {
+  bottom: 0.3rem;
+  position: absolute;
+  right: 0.3rem;
+}
+/* line 24, ../sass/_Q55XofYMimg.scss */
+.Q55XofYMimg .icon-ok, .Q55XofYMimg .icon-fail {
+  border: 1px solid #ffffff;
+}
+
+/* line 2, ../sass/_Q56XofYMimgM.scss */
+.Q56XofYMimgM img {
+  height: 12rem;
+}
+/* line 6, ../sass/_Q56XofYMimgM.scss */
+.Q56XofYMimgM .answers-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  margin-bottom: -0.75rem;
+}
+/* line 13, ../sass/_Q56XofYMimgM.scss */
+.Q56XofYMimgM .answer {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+/* line 18, ../sass/_Q56XofYMimgM.scss */
+.Q56XofYMimgM .answer .icon {
+  bottom: 0.3rem;
+  position: absolute;
+  right: 0.3rem;
+}
+/* line 24, ../sass/_Q56XofYMimgM.scss */
+.Q56XofYMimgM .icon-ok, .Q56XofYMimgM .icon-fail {
+  border: 1px solid #ffffff;
+}
+
+/* line 47, ../sass/main.scss */
+html, body {
+  background: transparent;
+  color: #303333;
+  cursor: default;
+  font-family: "open_sansregular", Arial;
+  font-size: 16px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+}
+
+/* line 60, ../sass/main.scss */
+a {
+  color: #7c8486;
+  font-family: "open_sansregular";
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* line 67, ../sass/main.scss */
+figure {
+  border: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 74, ../sass/main.scss */
+h1 {
+  font-family: "open_sansbold";
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0 0 0.5rem 0;
+}
+
+/* line 81, ../sass/main.scss */
+h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* line 87, ../sass/main.scss */
+hr {
+  background: #7c8486;
+  border: 0;
+  height: 1px;
+  margin: 0;
+}
+
+/* line 94, ../sass/main.scss */
+img {
+  display: block;
+}
+
+/* line 98, ../sass/main.scss */
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* line 105, ../sass/main.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 110, ../sass/main.scss */
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 116, ../sass/main.scss */
+.loading {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  font-size: 3em;
+  color: #666;
+}
+
+/* line 128, ../sass/main.scss */
+.loading:before {
+  text-align: center;
+  content: attr(data-text);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+/* line 138, ../sass/main.scss */
+.clearfix:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 146, ../sass/main.scss */
+.content {
+  background: #ffffff;
+  border-radius: 3px;
+  overflow: hidden;
+  padding: 2rem 2.7rem 2.7rem 2.7rem;
+}
+
+/* line 153, ../sass/main.scss */
+.bg-transparent .content {
+  background: transparent;
+}
+
+/* line 157, ../sass/main.scss */
+.no-padding .content {
+  padding: 0;
+}
+
+/* line 161, ../sass/main.scss */
+.header {
+  padding-bottom: 1.75rem;
+}
+
+/* line 165, ../sass/main.scss */
+.game-panel {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+/* line 170, ../sass/main.scss */
+.footer {
+  padding-top: 1.75rem;
+}
+
+/* line 174, ../sass/main.scss */
+.button {
+  background: #ffffff;
+  border: 1px solid #7c8486;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "open_sansregular";
+  font-size: 16px;
+}
+
+/* line 183, ../sass/main.scss */
+.button-sound {
+  border: 1px solid transparent;
+  padding: 0.2rem;
+}
+
+/* line 188, ../sass/main.scss */
+.check-container {
+  float: right;
+  text-align: center;
+}
+
+/* line 193, ../sass/main.scss */
+.check-correct {
+  padding: 0.2rem 0;
+  width: 8rem;
+}
+
+/* line 198, ../sass/main.scss */
+.check-correct.selected {
+  background: #7c8486;
+  border: 1px solid transparent;
+  color: #ffffff;
+}
+
+/* line 204, ../sass/main.scss */
+.check-correct.disabled {
+  cursor: not-allowed;
+}
+
+/* line 208, ../sass/main.scss */
+.show-correct {
+  font-size: 0.75rem;
+}
+
+/* line 212, ../sass/main.scss */
+.show-correct.disabled {
+  cursor: not-allowed;
+}
+
+/* line 216, ../sass/main.scss */
+.window {
+  background: rgba(255, 255, 255, 0.75);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* line 224, ../sass/main.scss */
+.window-frame {
+  background: #ffffff;
+  border-radius: 3px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+/* line 235, ../sass/main.scss */
+.window-title {
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+}
+
+/* line 240, ../sass/main.scss */
+.window-content {
+  padding: 0.2rem 0.5rem;
+}
+
+/* line 244, ../sass/main.scss */
+.button-window {
+  margin: 0.75rem auto 0 auto;
+  width: 8rem;
+}

@@ -1,0 +1,55 @@
+.Q15TextInputImg {
+	input {
+		background: $color-light;
+		border: 1px solid $color-medium-dark;
+		border-radius: 3px;
+		color: $color-dark;
+		font-family: $main-font, Arial;
+		font-size: $main-font-size;
+		line-height: 125%;
+		max-width: 10rem;
+		min-height: 1.2rem;
+		text-align: center;
+		padding: 0.2rem 0.5rem;
+		width: 10rem;
+	}
+	
+	.empty input {
+		display: none;
+	}
+	
+	.notempty input, .show-correct input {
+		display: inline-block;
+	}
+	
+	.icon {
+		font-size: 1.5rem;
+		height: 1.5rem;
+		position: absolute;
+		width: 1.5rem;
+	}
+	
+	.icon-ok {
+		border: 1px solid $color-white;
+	}
+	
+	.icon-fail {
+		border: 1px solid $color-white;
+	}
+	
+	.input-text-container {
+		position: relative;
+		transform: translate(-43.5%);
+	}
+	
+	.main-container {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 100%;
+		position: relative;
+	}
+	
+	.main-img {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,47 @@
+.Q07OrderImg {
+	figure {
+		margin: auto;
+	}
+	
+	.game-panel {
+		display: flex;
+	}
+	
+	.bottom {
+		background: $color-light;
+		border-radius: 3px;
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-right: 0.75rem;
+		padding: 0.2rem 0.5rem;
+	}
+	
+	.icon {
+		margin: 0.2rem auto 0 auto;
+	}
+		
+	.pair {
+		display: flex;
+		flex: 1;
+	}
+	
+	.pair:last-child .bottom {
+		margin: 0;
+	}
+	
+	.ui-draggable {
+		cursor: grab;
+	}
+	
+	.ui-draggable-disabled {
+		cursor: default;
+	}
+	
+	.ui-draggable-dragging {
+		background: $color-medium-light;
+		cursor: grabbing;
+		z-index: 10;
+	}
+}

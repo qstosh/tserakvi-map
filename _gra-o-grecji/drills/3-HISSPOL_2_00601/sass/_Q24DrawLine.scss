@@ -1,0 +1,42 @@
+.Q24DrawLine {	
+	.drawing-container {
+		height: 100%;
+//		margin-right: auto;
+//		margin-left: auto;
+		left: 50%;
+		position: absolute;
+		top: 0;
+		transform: translate(-50%);
+	}
+	
+	.img-container {
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.icon {
+		font-size: 1.5rem;
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+	
+	.icon-ok {
+		border: 1px solid $color-white;
+	}
+	
+	.icon-fail {
+		border: 1px solid $color-white;
+	}
+	
+	.main-container {
+		position: relative;
+	}
+	
+	.marker {
+		position: absolute;
+	}
+	
+	.marker-inside {
+		margin: -50% 0 0 -50%;
+	}
+}

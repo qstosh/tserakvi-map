@@ -1,0 +1,77 @@
+.Q02CrosswordImg {
+	table {
+		border-collapse: separate;
+		border-spacing: 0 3px;
+		margin: 0 auto 1.75rem auto;
+	}
+	
+	td {
+		vertical-align: middle;
+	}
+	
+	td.empty {
+		padding: 0.2rem 0.5rem;
+		text-align: right;
+	}
+	
+	img {
+		margin: 0 auto 1.75rem auto;
+		max-height: 30rem;
+		max-width: 100%;
+	}
+	
+	input {
+		background: transparent;
+		border: none;
+		color: $color-dark;
+		font-family: $main-font, Arial;
+		font-size: $main-font-size;
+		line-height: 125%;
+		min-height: 1.2rem;
+		text-align: center;
+		padding: 0.2rem 0.5rem;
+		width: 1rem;
+	}
+	
+	.button-container {
+		display: flex;
+		justify-content: center;
+	}
+		
+	.notempty {
+		border-top: 1px solid $color-medium-light;
+		border-bottom: 1px solid $color-medium-light;
+		border-left: 1px solid $color-medium-light;
+	}
+	
+	.last {
+		border-right: 1px solid $color-medium-light;
+	}
+	
+	.button {
+		padding: 0.2rem 0.5rem;
+	}
+	
+	.icon {
+		margin-top: auto;
+		margin-bottom: auto;
+		min-width: 1rem;
+	}
+	
+	.img-container {
+//		max-width: 100%;
+	}
+	
+	.prev-button {
+		margin-right: 1.75rem;
+	}
+	
+	.prev-button, .next-button {
+		display: flex;
+		font-size: 0.75rem;
+	}
+	
+	.result {
+		background: $color-medium-light;
+	}
+}

@@ -1,0 +1,16 @@
+.Q22MapColor {
+	li {
+		background: $color-light;
+		border-radius: 3px;
+		display: flex;
+		margin-bottom: 0.75rem;
+		padding: 0.2rem 0.5rem;
+	}
+	
+	.color {
+		border-radius: 3px;
+		height: 1rem;
+		margin: auto 0.5rem auto 0;
+		width: 1rem;
+	}
+}
