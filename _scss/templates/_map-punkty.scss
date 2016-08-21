@@ -64,7 +64,7 @@ html.map-punkty .image {
   top: 50%;
   left: 50%;
 
-  background-image: url(../images/min/map.jpg);
+  background-image: url(../images/map-all.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -76,10 +76,10 @@ html.map-punkty .image {
 
   z-index: 1;
 
-  @include media(highdpi) {
-
-    background-image: url(../images/min/map@2x.jpg);
-  }
+  // @include media(highdpi) {
+  //
+  //   background-image: url(../images/min/map@2x.jpg);
+  // }
 
   &--svg {
 
