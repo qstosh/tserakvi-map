@@ -1,6 +1,0 @@
-{
-  "engine": "custom_womi",
-  "version": "1.0",
-  "mainFile": "womi.js",
-  "parameters": {}
-}

@@ -1395,17 +1395,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/manifest.json": {
-		"fileType": 524288,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/manifest.json",
-		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/manifest-min.json",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1
 		}
 	},
 "hooks": [
