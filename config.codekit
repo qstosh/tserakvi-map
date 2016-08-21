@@ -1024,13 +1024,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/map-apple-tree.jpg": {
+	"\/images\/map-apple.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 9.4423e+06,
-		"inputAbbreviatedPath": "\/images\/map-apple-tree.jpg",
-		"outputAbbreviatedPath": "\/images\/map-apple-tree.jpg",
+		"inputAbbreviatedPath": "\/images\/map-apple.jpg",
+		"outputAbbreviatedPath": "\/images\/map-apple.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1046,13 +1046,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/map-forrest.jpg": {
+	"\/images\/map-creatures.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 9.83687e+06,
-		"inputAbbreviatedPath": "\/images\/map-forrest.jpg",
-		"outputAbbreviatedPath": "\/images\/map-forrest.jpg",
+		"initialSize": 1.26334e+07,
+		"inputAbbreviatedPath": "\/images\/map-creatures.jpg",
+		"outputAbbreviatedPath": "\/images\/map-creatures.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1083,20 +1083,20 @@
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 9.29455e+06,
+		"initialSize": 9.83687e+06,
 		"inputAbbreviatedPath": "\/images\/map-oak.jpg",
 		"outputAbbreviatedPath": "\/images\/map-oak.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/map-see-of-creatures.jpg": {
+	"\/images\/map-oakkk.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.26334e+07,
-		"inputAbbreviatedPath": "\/images\/map-see-of-creatures.jpg",
-		"outputAbbreviatedPath": "\/images\/map-see-of-creatures.jpg",
+		"initialSize": 9.29455e+06,
+		"inputAbbreviatedPath": "\/images\/map-oakkk.jpg",
+		"outputAbbreviatedPath": "\/images\/map-oakkk.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

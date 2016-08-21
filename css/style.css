@@ -1,21 +1,11 @@
-html.map-punkty .fullscreen-overlay, html.map-punkty .fullscreen-overlay:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-
-html.map-punkty .gallery .gallery-wrapper {
-  transform: translate3d(0, 0, 0); }
-
-html.map-punkty .definition__pointer__dot:before, html.map-punkty .nav__item button:after, html.map-punkty .gallery .gallery-wrapper__item img, html.map-punkty .fullscreen-overlay > i, .u-center,
+.u-center,
 [u-center] {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
 
-html.map-punkty .aside__bg {
+.aside__bg {
   position: absolute;
   display: block;
   top: 0;
@@ -23,11 +13,7 @@ html.map-punkty .aside__bg {
   width: 100%;
   height: 100%; }
 
-html.map-punkty .nav {
-  display: flex;
-  flex-flow: row wrap; }
-
-html.map-punkty .aside h2 {
+.aside h2 {
   display: flex;
   flex-flow: column wrap; }
 
@@ -44,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
-b, u, i, center, html.map-punkty .definition__pointer__dot__pulse-dot:after,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -769,38 +755,26 @@ html:fullscreen {
 .u-color-stroke-black {
   stroke: #111; }
 
-html.map-punkty,
-html.map-punkty body {
+html,
+body {
   overflow: hidden;
   height: 100%; }
-html.map-punkty body {
+
+body {
   position: relative;
   background: #111;
   opacity: 0;
   transform: translate3d(0, 0, 0) scale(1.3); }
-  html.map-punkty body.loaded {
+  body.loaded {
     transition: opacity .3s ease-out .6s, transform .3s ease-out .6s;
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
     will-change: opacity, transform; }
-html.map-punkty button {
-  text-transform: none; }
 
-html.map-punkty .map-wrapper {
+.map-wrapper {
   height: 100%; }
 
-html.map-punkty .intro {
-  position: relative;
-  z-index: 1;
-  width: 43rem;
-  width: 60ch;
-  padding: 1.62rem;
-  background: rgba(255, 255, 255, 0.5);
-  background: white; }
-  html.map-punkty .intro h2 {
-    margin-top: 0; }
-
-html.map-punkty .image {
+.image {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -812,26 +786,37 @@ html.map-punkty .image {
   transform: translate3d(0, 0, 0) scale(0.75);
   transition: transform .3s ease .1s;
   z-index: 1; }
-  html.map-punkty .image--svg {
-    background-image: url("../images/map.svg"); }
-    @media (-webkit-min-device-pixel-ratio: 2) {
-      html.map-punkty .image--svg {
-        background-image: url("../images/map.svg"); } }
-  html.map-punkty .image[class*="remove-active"] {
+  .image.creatures {
+    background-image: url("../images/map-creatures.jpg"); }
+  .image.oak {
+    background-image: url("../images/map-oak.jpg"); }
+  .image.apple {
+    background-image: url("../images/map-apple.jpg"); }
+  .image.village {
+    background-image: url("../images/map-village.jpg"); }
+  .image.sona {
+    background-image: url("../images/map-sona.jpg"); }
+  .image.chinka {
+    background-image: url("../images/map-chinka.jpg"); }
+  .image.george {
+    background-image: url("../images/map-george.jpg"); }
+  .image.gate {
+    background-image: url("../images/map-gate.jpg"); }
+  .image[class*="remove-active"] {
     will-change: transform; }
-  html.map-punkty .image .definition {
+  .image .definition {
     transition: opacity .3s ease 1s; }
-  html.map-punkty .image--zoomed .definition {
+  .image--zoomed .definition {
     will-change: opacity;
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s ease 0s;
     z-index: -1; }
-  html.map-punkty .image--zoomed .definition--active {
+  .image--zoomed .definition--active {
     visibility: visible;
     opacity: 1;
     z-index: 2; }
-  html.map-punkty .image__scale-reset {
+  .image__scale-reset {
     width: 4000px;
     height: 4000px;
     position: absolute;
@@ -839,12 +824,12 @@ html.map-punkty .image {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none; }
-    html.map-punkty .image__scale-reset--zoomed-in {
+    .image__scale-reset--zoomed-in {
       cursor: zoom-out;
       z-index: 999990;
       pointer-events: auto; }
 
-html.map-punkty .aside {
+.aside {
   position: fixed;
   top: 0;
   right: 0;
@@ -857,7 +842,7 @@ html.map-punkty .aside {
   opacity: 0;
   clip: rect(0 900px 0 900px);
   color: #111; }
-  html.map-punkty .aside:before {
+  .aside:before {
     content: "";
     position: absolute;
     width: 1px;
@@ -866,327 +851,55 @@ html.map-punkty .aside {
     left: 0;
     transform-origin: left center;
     transform: scaleX(0.25); }
-  html.map-punkty .aside h2, html.map-punkty .aside__scroll-container {
+  .aside h2, .aside__scroll-container {
     max-width: 340px;
     margin: 0 auto;
     text-align: left; }
-  html.map-punkty .aside h2 {
+  .aside h2 {
     height: 18vh;
     line-height: 1;
     font-size: 3vw;
     justify-content: center; }
     @media (max-width: 730px) {
-      html.map-punkty .aside h2 {
+      .aside h2 {
         font-size: 30px; } }
     @media (min-width: 1230px) {
-      html.map-punkty .aside h2 {
+      .aside h2 {
         font-size: 40px; } }
-  html.map-punkty .aside p:first-child {
+  .aside p:first-child {
     margin-top: 0; }
-  html.map-punkty .aside__bg {
+  .aside__bg {
     background: white;
     z-index: -1; }
-  html.map-punkty .aside--active {
+  .aside--active {
     visibility: visible;
     opacity: 1;
     clip: rect(0 900px 2000px 0);
     will-change: transform, clip;
     transition: clip .4s ease-out .45s; }
-  html.map-punkty .aside__scroll-container {
+  .aside__scroll-container {
     overflow-y: auto;
     height: calc(82vh - 1rem);
     padding-right: 1rem;
     color: #111; }
-    html.map-punkty .aside__scroll-container .toggle-button {
+    .aside__scroll-container .toggle-button {
       margin-top: 1rem; }
-  html.map-punkty .aside__image-description {
+  .aside__image-description {
     opacity: .7;
     font-size: 0.875rem;
     transition: opacity .2s ease; }
-    html.map-punkty .aside__image-description.ng-animate {
+    .aside__image-description.ng-animate {
       will-change: opacity; }
-    html.map-punkty .aside__image-description.ng-enter, html.map-punkty .aside__image-description.ng-enter-active {
+    .aside__image-description.ng-enter, .aside__image-description.ng-enter-active {
       opacity: .7; }
-    html.map-punkty .aside__image-description.ng-leave, html.map-punkty .aside__image-description.ng-leave-active {
+    .aside__image-description.ng-leave, .aside__image-description.ng-leave-active {
       opacity: 0;
       display: none; }
 
-html.map-punkty .toggle {
-  position: fixed;
-  z-index: 9999;
-  left: 4rem; }
-  html.map-punkty .toggle--definition {
-    bottom: 1rem; }
-  html.map-punkty .toggle--intro {
-    bottom: 4rem; }
-  html.map-punkty .toggle label {
-    cursor: pointer; }
-    html.map-punkty .toggle label.ng-animate {
-      transition: none; }
-
-html.map-punkty .definition {
-  left: 50%;
-  top: 50%;
-  transform-style: flat; }
-  html.map-punkty .definition.ng-hide {
-    opacity: 0;
-    z-index: -1;
-    transition-delay: 0s; }
-  html.map-punkty .definition.ng-hide-remove {
-    transition-delay: 0s; }
-  html.map-punkty .definition,
-  html.map-punkty .definition > * {
-    position: absolute;
-    transform-origin: left top; }
-  html.map-punkty .definition > * {
-    top: 0;
-    left: 0; }
-  html.map-punkty .definition__label {
-    background-color: #FFF;
-    display: table;
-    z-index: 100;
-    position: absolute;
-    opacity: 1;
-    border: 2px solid #111;
-    color: #111;
-    transform-origin: right top; }
-    html.map-punkty .definition__label--hidden {
-      transform: translate(-100px, -100px) scale(0) !important; }
-    html.map-punkty .definition__label.ng-animate {
-      z-index: 9999; }
-    html.map-punkty .definition__label:not(.definition__label--active) {
-      cursor: pointer; }
-  html.map-punkty .definition__pointer__line {
-    transform: translate(-97px, -97px) scale(1, 1); }
-    html.map-punkty .definition__pointer__line--hidden {
-      transform: scale(0, 0) !important; }
-  html.map-punkty .definition__pointer__dot {
-    background: #111;
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    transform-origin: center center;
-    cursor: pointer; }
-    html.map-punkty .definition__pointer__dot, html.map-punkty .definition__pointer__dot:after {
-      display: table;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      border-radius: 50%; }
-    html.map-punkty .definition__pointer__dot:before {
-      content: attr(data-title);
-      position: absolute;
-      font-weight: bold;
-      z-index: 1; }
-    html.map-punkty .definition__pointer__dot__pulse-dot, html.map-punkty .definition__pointer__dot:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.9);
-      background: white; }
-    html.map-punkty .definition__pointer__dot__pulse-dot {
-      width: 330px;
-      height: 330px;
-      background: none;
-      transform: translate3d(-50%, -50%, 0);
-      z-index: -1; }
-      html.map-punkty .definition__pointer__dot__pulse-dot:after {
-        content: "";
-        display: table;
-        width: 330px;
-        height: 330px;
-        line-height: 330px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
-        transform: scale(0.07); }
-  html.map-punkty .definition__pointer--active .definition__pointer__dot__pulse-dot:after {
-    animation: puls .45s ease-out 2 alternate;
-    animation-delay: .85s;
-    will-change: transform, opacity; }
-  html.map-punkty .definition--left-top .definition__label {
-    transform-origin: right top;
-    top: -98px;
-    right: 93px;
-    left: initial; }
-  html.map-punkty .definition--right-top .definition__pointer__line {
-    transform: scale(1, -1);
-    transform-origin: left top; }
-  html.map-punkty .definition--right-top .definition__label {
-    transform-origin: left top;
-    top: -101px;
-    left: 96px; }
-  html.map-punkty .definition--left-bottom .definition__pointer__line {
-    transform: scale(-1, 1);
-    transform-origin: left top; }
-  html.map-punkty .definition--left-bottom .definition__label {
-    transform-origin: right top;
-    top: 95px;
-    right: 95px;
-    left: initial; }
-  html.map-punkty .definition--right-bottom .definition__pointer__line {
-    transform: scale(1, 1);
-    transform-origin: left top; }
-  html.map-punkty .definition--right-bottom .definition__label {
-    transform-origin: left top;
-    top: 95px;
-    left: 95px; }
-
-html.map-punkty .nav {
-  position: fixed;
-  width: 65%;
-  left: 0;
+.hover-map {
+  position: absolute;
   top: 0;
-  padding: 0.5rem 1rem 0 4rem;
-  visibility: visible;
-  opacity: 1;
-  z-index: 30; }
-  html.map-punkty .nav--hidden {
-    background: transparent;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .2s ease; }
-    html.map-punkty .nav--hidden > figure {
-      opacity: 0;
-      transition-duration: .1s;
-      transition-delay: 0 !important; }
-  html.map-punkty .nav__item {
-    flex: 0 0 auto;
-    order: 1;
-    text-align: center;
-    margin: 0.5rem 0 0 0.5rem;
-    will-change: opacity;
-    opacity: 1;
-    transition: opacity .15s ease-in; }
-    html.map-punkty .nav__item:first-child {
-      margin-left: 0; }
-    html.map-punkty .nav__item button {
-      display: table;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 50%;
-      padding: 0;
-      position: relative;
-      font-size: 13px;
-      font-weight: bold;
-      color: #111;
-      background-color: white;
-      border: 2px solid #111;
-      transition: background-color .2s ease; }
-      html.map-punkty .nav__item button:after {
-        content: attr(data-title); }
-      @media (min-device-width: 1025px) {
-        html.map-punkty .nav__item button:hover {
-          background-color: rgba(0, 0, 0, 0.5);
-          color: white;
-          will-change: background-color; } }
-      html.map-punkty .nav__item button:active {
-        background-color: rgba(255, 255, 255, 0.4);
-        will-change: background-color; }
-    html.map-punkty .nav__item--active button {
-      background-color: #111;
-      color: white;
-      will-change: background-color, color; }
-      html.map-punkty .nav__item--active button:hover {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: white; }
-
-html.map-punkty .gallery {
-  margin: 0;
-  position: fixed;
-  width: 65%;
-  height: 100%;
-  background: #333;
-  overflow: hidden;
-  z-index: 50;
-  visibility: visible;
-  opacity: 1;
-  transform: scale3d(1, 1, 1);
-  transition: all .45s ease-in-out;
-  will-change: transform; }
-  html.map-punkty .gallery.ng-hide {
-    visibility: hidden;
-    opacity: 0;
-    transform: scale(1.05); }
-  html.map-punkty .gallery.ng-hide-add-active.ng-hide-add, html.map-punkty .gallery.ng-hide-remove-active.ng-hide-remove {
-    will-change: opacity; }
-  html.map-punkty .gallery .gallery-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-    html.map-punkty .gallery .gallery-wrapper__item {
-      height: 100%;
-      transition: opacity .5s ease-out; }
-      html.map-punkty .gallery .gallery-wrapper__item.ng-animate {
-        will-change: opacity, scale; }
-      html.map-punkty .gallery .gallery-wrapper__item.ng-show, html.map-punkty .gallery .gallery-wrapper__item.ng-show-active {
-        opacity: 1; }
-      html.map-punkty .gallery .gallery-wrapper__item.ng-hide, html.map-punkty .gallery .gallery-wrapper__item.ng-hide-active {
-        opacity: 0; }
-      html.map-punkty .gallery .gallery-wrapper__item img {
-        margin-top: -20px;
-        display: table;
-        width: 50vw;
-        height: 90vh;
-        object-fit: contain; }
-  html.map-punkty .gallery .gallery-controls {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    user-select: none; }
-    html.map-punkty .gallery .gallery-controls__item {
-      display: table;
-      width: 26px;
-      height: 26px;
-      line-height: 26px;
-      border-radius: 50%;
-      background: #FFF;
-      color: #FFF;
-      text-align: center;
-      margin-bottom: 1rem;
-      opacity: .4;
-      color: #111;
-      font-weight: bold;
-      cursor: pointer; }
-      html.map-punkty .gallery .gallery-controls__item:not(.gallery-controls__item--active):hover {
-        opacity: .75; }
-      html.map-punkty .gallery .gallery-controls__item--active {
-        opacity: 1; }
-      html.map-punkty .gallery .gallery-controls__item:not(:last-child) {
-        margin-right: 1rem; }
-
-html.map-punkty .fullscreen-overlay {
-  z-index: 999999999999;
-  cursor: pointer;
-  transform: scale(1);
-  opacity: 1; }
-  html.map-punkty .fullscreen-overlay:before {
-    content: "";
-    background: black;
-    opacity: .75; }
-  html.map-punkty .fullscreen-overlay i:before {
-    font-size: 3rem; }
-  html.map-punkty .fullscreen-overlay > i {
-    color: white; }
-    html.map-punkty .fullscreen-overlay > i:before {
-      font-size: 10rem; }
-  html.map-punkty .fullscreen-overlay--inactive {
-    pointer-events: none;
-    will-change: transform, opacity;
-    transition: transform .3s ease-out, opacity .3s ease-out;
-    transform: scale(2);
-    opacity: 0; }
-
-html.map-punkty .u-debug {
-  mix-blend-mode: darken;
-  opacity: .8;
-  color: red; }
+  left: 0; }
 
 .u-hide,
 [u-hide] {
