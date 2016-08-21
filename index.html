@@ -51,32 +51,6 @@
     <div class="image__scale-reset"
         ng-class="{'image__scale-reset--zoomed-in' : state != 0}"
         ng-click="mapReset()"></div>
-
-    <!-- DEFINITION ITEMS -->
-    <figure class="definition definition--{{item.position}}"
-            ng-repeat="item in items track by $index"
-            ng-show="$parent.definitionHidden === false && $parent.introActive === false"
-            ng-class="{'definition--active' : state === $index + 1}"
-            style="left: calc(50% + {{item.x}}px);
-                   top: calc(50% + {{item.y}}px)">
-
-      <i class="definition__vignette"></i>
-      <i class="definition__pointer" ng-class="{'definition__pointer--active' : $parent.state === $index + 1}">
-        <i class="definition__pointer__dot"
-           style="background-color: {{item.color}}; transform: scale({{labelScale}}); -webkit-transform: scale({{labelScale}})"
-           data-title="{{$index + 1}}"
-           ng-click="$parent.state = $index + 1;
-                     $parent.mapX = item.x;
-                     $parent.mapXoffset = item.xOffset;
-                     $parent.mapY = item.y;
-                     $parent.mapYoffset = item.yOffset;
-                     $parent.labelScale = 1;
-                     $parent.test = $parent.watchWindowWidth * 35 / 100 / 2;
-                     $parent.mapScale = 1;">
-        </i>
-      </i>
-
-    </figure>
   </main>
 
   <figure class="mask" ng-class="{'mask--active' : state !== 0}">
@@ -97,7 +71,7 @@
     </figure>
   </aside>
 
-  <nav class="nav" role="navigation"
+  <nav class="u-hide" class="nav" role="navigation"
        ng-class="{'nav--hidden' : state === 0 || definitionHidden === true}">
     <figure class="nav__item nav__item--{{item.class}}"
             ng-repeat="item in items"
@@ -113,12 +87,6 @@
       <button style="border-color: {{item.color}}" data-title="{{$index + 1}}"></button>
     </figure>
   </nav>
-
-  <figure class="toggle toggle--definition" ng-show="introActive === false">
-    <input id="toggle--definition" class="u-hide" type="checkbox" ng-model="definitionHidden">
-    <label for="toggle--definition" class="button icon-show" ng-if="definitionHidden === true"></label>
-    <label for="toggle--definition" class="button icon-hide" ng-if="definitionHidden === false"></label>
-  </figure>
 
   <!-- Vendor Scripts -->
   <script src="js/angular.js"></script>
